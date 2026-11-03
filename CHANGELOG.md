@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Saved Paperless views can be opened as live document folders.** Connect a
+  view in Documents, keep it private or explicitly share its current and future
+  matches with the family. Source filters, ordering and pagination are read on
+  demand; preview and download recheck membership. Disconnecting only removes
+  the binding. An optional module adds a separate Paperless navigation page.
 - **A Caddy example for automatic HTTPS.** `deploy/caddy/` holds an example Compose deployment
   that puts Yuvomi behind Caddy, which obtains and renews Let's Encrypt certificates and keeps the
   app port off the host. It is an example next to `nginx.conf.example`, not tested in CI; the Caddy
