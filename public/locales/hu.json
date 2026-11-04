@@ -3945,7 +3945,7 @@
             "shared": "Család",
             "shareConsent": "Engedélyezem, hogy a Dokumentumokhoz hozzáférő személyek a nézet összes jelenlegi és jövőbeli dokumentumát olvassák és letöltsék.",
             "viewHint": "A Paperless-nézet módosítása ezt a mappát is módosítja. A fájlok a Paperlessben maradnak. Szűrők nélkül a kapcsolat számára olvasható összes dokumentum megjelenik.",
-            "readOnly": "Aktuális nézet a Paperlessből. A dokumentumokat és szűrőket a Paperlessben kezelheted.",
+            "readOnly": "A dokumentumok és szűrők a Paperless rendszerben maradnak. A jogosult rendszergazdák itt módosíthatják a címkéket.",
             "refresh": "Frissítés",
             "preview": "Előnézet",
             "download": "Letöltés",
@@ -3968,6 +3968,19 @@
                 "invalid": "Ellenőrizd a mappa nevét, a kapcsolatot és a nézetet.",
                 "forbidden": "Nincs jogosultságod ehhez a művelethez.",
                 "preview": "Ehhez a fájltípushoz nincs előnézet. Töltsd le a dokumentumot."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "A módosítások közvetlenül a Paperless rendszerbe kerülnek. A keresés a betöltött címkéket szűri; a többihez tölts be továbbiakat.",
+                "search": "Keresés a betöltött címkékben",
+                "assigned": "Dokumentumcímkék",
+                "more": "További címkék betöltése",
+                "empty": "Nincs hozzárendelt címke.",
+                "selection": "{{count}} címke kiválasztva",
+                "changed": "A címkék megváltoztak a Paperless rendszerben. Mentés előtt frissíts.",
+                "forbidden": "Nincs jogosultságod e címkék módosításához.",
+                "invalid": "A címkéket nem sikerült menteni. Frissíts, és próbáld újra."
             }
         },
         "title": "Dokumentumok",

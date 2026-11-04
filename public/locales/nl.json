@@ -3945,7 +3945,7 @@
             "shared": "Gezin",
             "shareConsent": "Ik geef iedereen met toegang tot Documenten toestemming om alle huidige en toekomstige documenten in deze weergave te lezen en te downloaden.",
             "viewHint": "Wijzigingen aan de Paperless-weergave wijzigen ook deze map. Bestanden blijven in Paperless. Zonder filters worden alle voor de verbinding leesbare documenten opgenomen.",
-            "readOnly": "Actuele weergave uit Paperless. Beheer documenten en filters in Paperless.",
+            "readOnly": "Documenten en filters blijven in Paperless. Bevoegde beheerders kunnen hier tags wijzigen.",
             "refresh": "Vernieuwen",
             "preview": "Voorbeeld",
             "download": "Downloaden",
@@ -3968,6 +3968,19 @@
                 "invalid": "Controleer de mapnaam, verbinding en weergave.",
                 "forbidden": "Je hebt geen toestemming voor deze actie.",
                 "preview": "Geen voorbeeld voor dit bestandstype. Download het document."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Wijzigingen worden direct in Paperless opgeslagen. Zoeken filtert geladen tags; laad meer om de rest te bekijken.",
+                "search": "Geladen tags doorzoeken",
+                "assigned": "Documenttags",
+                "more": "Meer tags laden",
+                "empty": "Geen tags toegewezen.",
+                "selection": "{{count}} tags geselecteerd",
+                "changed": "De tags zijn gewijzigd in Paperless. Vernieuw voordat je opslaat.",
+                "forbidden": "Je mag deze tags niet wijzigen.",
+                "invalid": "De tags konden niet worden opgeslagen. Vernieuw en probeer opnieuw."
             }
         },
         "title": "Documenten",

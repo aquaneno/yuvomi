@@ -3883,7 +3883,7 @@
             "shared": "Aile",
             "shareConsent": "Belgelere erişimi olan herkesin bu görünümdeki tüm mevcut ve gelecekteki belgeleri okumasına ve indirmesine izin veriyorum.",
             "viewHint": "Paperless görünümündeki değişiklikler bu klasörü de değiştirir. Dosyalar Paperless’ta kalır. Filtre yoksa bağlantının okuyabildiği tüm belgeler dahil edilir.",
-            "readOnly": "Paperless’tan güncel görünüm. Belgeleri ve filtreleri Paperless’ta yönetin.",
+            "readOnly": "Belgeler ve filtreler Paperless içinde kalır. Yetkili yöneticiler etiketleri burada değiştirebilir.",
             "refresh": "Yenile",
             "preview": "Önizleme",
             "download": "İndir",
@@ -3906,6 +3906,19 @@
                 "invalid": "Klasör adını, bağlantıyı ve görünümü kontrol edin.",
                 "forbidden": "Bu işlem için izniniz yok.",
                 "preview": "Bu dosya türü önizlenemez. Belgeyi indirin."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Değişiklikler doğrudan Paperless içine kaydedilir. Arama yüklenen etiketleri süzer; kalanları görmek için daha fazla yükleyin.",
+                "search": "Yüklenen etiketlerde ara",
+                "assigned": "Belge etiketleri",
+                "more": "Daha fazla etiket yükle",
+                "empty": "Atanmış etiket yok.",
+                "selection": "{{count}} etiket seçildi",
+                "changed": "Paperless içindeki etiketler değişti. Kaydetmeden önce yenileyin.",
+                "forbidden": "Bu etiketleri değiştirme izniniz yok.",
+                "invalid": "Etiketler kaydedilemedi. Yenileyip tekrar deneyin."
             }
         },
         "title": "Belgeler",

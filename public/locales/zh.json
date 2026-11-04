@@ -3883,7 +3883,7 @@
             "shared": "家庭",
             "shareConsent": "我允许所有有权访问“文档”的人阅读和下载此视图中当前及今后的所有文档。",
             "viewHint": "在 Paperless 中修改此视图也会更改此文件夹。文件保留在 Paperless 中。没有筛选条件时，将包含此连接可读取的所有文档。",
-            "readOnly": "来自 Paperless 的当前视图。请在 Paperless 中管理文档和筛选条件。",
+            "readOnly": "文档和筛选条件保留在 Paperless。获授权的管理员可以在此更改标签。",
             "refresh": "刷新",
             "preview": "预览",
             "download": "下载",
@@ -3906,6 +3906,19 @@
                 "invalid": "请检查文件夹名称、连接和视图。",
                 "forbidden": "你无权执行此操作。",
                 "preview": "此文件类型无法预览。请下载文档。"
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "更改会直接保存到 Paperless。搜索会筛选已加载的标签；请加载更多以查看其余标签。",
+                "search": "搜索已加载的标签",
+                "assigned": "文档标签",
+                "more": "加载更多标签",
+                "empty": "尚未分配标签。",
+                "selection": "已选择 {{count}} 个标签",
+                "changed": "Paperless 中的标签已更改。请刷新后再保存。",
+                "forbidden": "你没有更改这些标签的权限。",
+                "invalid": "无法保存标签。请刷新后重试。"
             }
         },
         "title": "文档",

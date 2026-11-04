@@ -81,6 +81,7 @@ import {
 } from '/utils/document-folder-delete.js';
 import { reloadAfterSave } from '/utils/reload-after-save.js';
 import { mountPaperlessFolders } from '/components/paperless-folders.js';
+import { openPaperlessTags } from '/components/paperless-tags.js';
 
 // Das Eingabefeld der Personenauswahl im Dialog (#1705).
 const SUBJECT_INPUT = 'document_subject';
@@ -4398,6 +4399,7 @@ function viewerStepKeys() {
  *   Liste, den der vorige Betrachter weiterreicht
  */
 function openDocumentViewer(doc, { opener: listOpener = null } = {}) {
+  const paperless = documentStorageBackend(doc) === 'dms' && doc.dms_provider === 'paperless';
   const categoryLabel = categoryLabels()[doc.category] || doc.category;
   const previewUrl = `/api/v1/documents/${doc.id}/preview`;
   const downloadUrl = `/api/v1/documents/${doc.id}/download`;
@@ -4495,6 +4497,7 @@ function openDocumentViewer(doc, { opener: listOpener = null } = {}) {
             ${nextDoc ? rowActionHtml({ icon: 'chevron-right', action: 'viewer-next', label: t('documents.viewerNextNamed', { name: nextDoc.name }), attrs: { 'aria-keyshortcuts': stepKeys.next, title: t('documents.viewerNextNamed', { name: nextDoc.name }) } }) : '<span class="row-action document-viewer__pager-edge" aria-hidden="true"><i data-lucide="chevron-right" class="icon-md"></i></span>'}
           </span>` : ''}
           <span class="document-viewer__actions">
+            ${paperless ? `<button type="button" class="btn btn--secondary btn--sm document-viewer__action" data-action="paperless-tags"><i data-lucide="tags" class="icon-md" aria-hidden="true"></i><span>${esc(t('documents.paperless.tags.action'))}</span></button>` : ''}
             ${externalUrl ? `
             <a class="btn btn--ghost btn--sm doc-viewer__dms-link" href="${esc(externalUrl)}" target="_blank" rel="noopener noreferrer">
               <i data-lucide="external-link" class="icon-md" aria-hidden="true"></i>
@@ -4536,6 +4539,7 @@ function openDocumentViewer(doc, { opener: listOpener = null } = {}) {
             label: t('common.moreActionsNamed', { name: doc.name }),
             triggerClass: 'btn btn--secondary btn--icon document-viewer__more-btn',
             items: [
+              ...(paperless ? [{ action: 'viewer-tags', icon: 'tags', label: t('documents.paperless.tags.action') }] : []),
               ...(externalUrl ? [{ action: 'viewer-dms', icon: 'external-link', label: t('documents.dmsOpenExternal') }] : []),
               ...(previewKind(doc.mime_type) === 'pdf' ? [{ action: 'viewer-open-tab', icon: 'external-link', label: t('documents.viewerOpenInTab') }] : []),
               ...(mayManage(doc) ? [{ action: 'viewer-edit', icon: 'pencil', label: t('common.edit') }] : []),
@@ -4582,11 +4586,17 @@ function openDocumentViewer(doc, { opener: listOpener = null } = {}) {
         openDocumentModal(doc);
       });
       wireViewerStage(panel, doc);
+      panel.querySelector('[data-action="paperless-tags"]')?.addEventListener('click', () => {
+        if (opener?.isConnected && opener !== document.body) opener.focus();
+        openPaperlessTags({ path: `/documents/dms/paperless/documents/${doc.id}/tags`, title: doc.name,
+          onSaved: () => openDocumentViewer(doc, { opener }) });
+      });
       // Das Mehr-Menue (schmal) loest die Knoepfe der Leiste aus - ein Weg je
       // Handlung. Synchron im Tipp: Teilen und Herunterladen brauchen die
       // Nutzeraktivierung des Klicks.
       installPopoverMenus(panel);
       const VIEWER_MENU_TARGETS = {
+        'viewer-tags': '[data-action="paperless-tags"]',
         'viewer-dms': '.doc-viewer__dms-link',
         'viewer-open-tab': 'a.document-viewer__action[target="_blank"]',
         'viewer-edit': '[data-action="edit-document"]',

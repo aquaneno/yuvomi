@@ -3945,7 +3945,7 @@
             "shared": "Pamilya",
             "shareConsent": "Pinapahintulutan ko ang lahat ng may access sa Mga Dokumento na basahin at i-download ang lahat ng kasalukuyan at susunod na dokumento sa view na ito.",
             "viewHint": "Ang pagbabago ng view sa Paperless ay magbabago rin sa folder na ito. Mananatili sa Paperless ang mga file. Kapag walang filter, kasama ang lahat ng dokumentong mababasa ng koneksyon.",
-            "readOnly": "Kasalukuyang view mula sa Paperless. Pamahalaan ang mga dokumento at filter sa Paperless.",
+            "readOnly": "Nananatili sa Paperless ang mga dokumento at filter. Maaaring baguhin dito ng awtorisadong administrator ang mga tag.",
             "refresh": "I-refresh",
             "preview": "I-preview",
             "download": "I-download",
@@ -3968,6 +3968,19 @@
                 "invalid": "Suriin ang pangalan ng folder, koneksyon at view.",
                 "forbidden": "Wala kang pahintulot para sa aksyong ito.",
                 "preview": "Walang preview para sa uri ng file na ito. I-download ang dokumento."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Direktang sine-save sa Paperless ang mga pagbabago. Ang paghahanap ay para sa mga na-load na tag; mag-load pa para makita ang iba.",
+                "search": "Hanapin ang mga na-load na tag",
+                "assigned": "Mga tag ng dokumento",
+                "more": "Mag-load pa ng mga tag",
+                "empty": "Walang nakatalagang tag.",
+                "selection": "{{count}} tag ang napili",
+                "changed": "Nagbago ang mga tag sa Paperless. I-refresh bago i-save.",
+                "forbidden": "Wala kang pahintulot na baguhin ang mga tag na ito.",
+                "invalid": "Hindi na-save ang mga tag. I-refresh at subukan muli."
             }
         },
         "title": "Mga Dokumento",

@@ -1,5 +1,6 @@
-/** Read-only virtual folders. No family_documents rows or file copies. */
+/** Virtual folders with scoped media and tags. No local file copies. */
 import express from 'express';
+import paperlessTagsRouter from './paperless-tags.js';
 import * as db from '../db.js';
 import { createLogger } from '../logger.js';
 import { isAdminRequest } from '../middleware/require-admin.js';
@@ -8,6 +9,7 @@ import { getAdapter } from '../services/dms/index.js';
 import { PaperlessViewError, positiveId } from '../services/dms/paperless-views.js';
 
 const router = express.Router();
+router.use(paperlessTagsRouter);
 const log = createLogger('PaperlessFolders');
 const COLUMNS = 'id, name, account_id, view_id, visibility, created_by, created_at, updated_at';
 const PREVIEW_MIME = new Set(['application/pdf', 'image/png', 'image/jpeg', 'image/webp', 'image/gif', 'text/plain']);

@@ -320,6 +320,7 @@ const APP_SHELL = [
   '/components/detail-view.js',
   '/components/document-attach.js',
   '/components/paperless-folders.js',
+  '/components/paperless-tags.js',
   '/components/health-fasting-insights.js',
   '/components/modal.js',
   '/components/photo-screensaver.js',

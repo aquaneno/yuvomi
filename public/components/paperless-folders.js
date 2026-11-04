@@ -1,5 +1,6 @@
 /** Saved Paperless views in Documents. Files and filters stay in Paperless. */
 import { api } from '/api.js';
+import { openPaperlessTags } from '/components/paperless-tags.js';
 import { t } from '/i18n.js';
 import { esc, REQUIRED_MARK } from '/utils/html.js';
 import { reloadAfterSave } from '/utils/reload-after-save.js';
@@ -108,6 +109,7 @@ export async function mountPaperlessFolders({ sidebar, content, accounts = [], c
               <i data-lucide="file-text" aria-hidden="true"></i>
               <span class="list-row__name">${esc(doc.title)}</span>
               <div class="paperless-folder__actions">
+                <button class="btn btn--secondary btn--sm" type="button" data-pl-tags="${esc(doc.id)}" data-pl-title="${esc(doc.title)}">${esc(t(key('tags.action')))}</button>
                 <a class="btn btn--secondary btn--sm" target="_blank" rel="noopener noreferrer" href="${esc(paperlessMediaPath(folder.id, doc.id, 'preview'))}">${esc(t(key('preview')))}</a>
                 <a class="btn btn--ghost btn--sm" href="${esc(paperlessMediaPath(folder.id, doc.id, 'download'))}">${esc(t(key('download')))}</a>
                 ${external ? `<a class="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer" href="${esc(external)}">${esc(t(key('openExternal')))}</a>` : ''}
@@ -252,7 +254,13 @@ export async function mountPaperlessFolders({ sidebar, content, accounts = [], c
   }, options);
   content.addEventListener('click', (event) => {
     if (!active) return;
-    if (event.target.closest('[data-pl-prev]')) show(active, Math.max(1, page - 1));
+    const tags = event.target.closest('[data-pl-tags]');
+    if (tags) {
+      const folder = active;
+      openPaperlessTags({ path: `${ROOT}/folders/${folder.id}/documents/${encodeURIComponent(tags.dataset.plTags)}/tags`,
+        title: tags.dataset.plTitle, signal, onSaved: () => alive() && active?.id === folder.id ? show(folder, page) : undefined });
+    }
+    else if (event.target.closest('[data-pl-prev]')) show(active, Math.max(1, page - 1));
     else if (event.target.closest('[data-pl-next]')) show(active, page + 1);
     else if (event.target.closest('[data-pl-refresh]')) show(active, page);
   }, options);

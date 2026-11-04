@@ -4211,7 +4211,7 @@
             "shared": "Rodina",
             "shareConsent": "Povoluji všem s přístupem k Dokumentům číst a stahovat všechny současné i budoucí dokumenty tohoto pohledu.",
             "viewHint": "Změny pohledu v Paperless změní i tuto složku. Soubory zůstávají v Paperless. Bez filtrů jsou zahrnuty všechny dokumenty čitelné tímto připojením.",
-            "readOnly": "Aktuální pohled z Paperless. Dokumenty a filtry spravujte v Paperless.",
+            "readOnly": "Dokumenty a filtry zůstávají v Paperless. Oprávnění správci zde mohou měnit štítky.",
             "refresh": "Aktualizovat",
             "preview": "Náhled",
             "download": "Stáhnout",
@@ -4234,6 +4234,19 @@
                 "invalid": "Zkontrolujte název složky, připojení a pohled.",
                 "forbidden": "K této akci nemáte oprávnění.",
                 "preview": "Tento typ souboru nemá náhled. Stáhněte dokument."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Změny se ukládají přímo do Paperless. Hledání filtruje načtené štítky; další lze načíst tlačítkem.",
+                "search": "Hledat načtené štítky",
+                "assigned": "Štítky dokumentu",
+                "more": "Načíst další štítky",
+                "empty": "Žádné přiřazené štítky.",
+                "selection": "Vybráno štítků: {{count}}",
+                "changed": "Štítky se v Paperless změnily. Před uložením je obnovte.",
+                "forbidden": "Nemáte oprávnění měnit tyto štítky.",
+                "invalid": "Štítky nelze uložit. Obnovte je a zkuste to znovu."
             }
         },
         "title": "Dokumenty",

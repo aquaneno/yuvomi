@@ -3945,7 +3945,7 @@
             "shared": "Keluarga",
             "shareConsent": "Saya mengizinkan semua orang yang memiliki akses Dokumen untuk membaca dan mengunduh semua dokumen saat ini dan mendatang dalam tampilan ini.",
             "viewHint": "Perubahan tampilan di Paperless juga mengubah folder ini. Berkas tetap di Paperless. Tanpa filter, semua dokumen yang dapat dibaca koneksi akan disertakan.",
-            "readOnly": "Tampilan terkini dari Paperless. Kelola dokumen dan filter di Paperless.",
+            "readOnly": "Dokumen dan filter tetap berada di Paperless. Administrator berwenang dapat mengubah tag di sini.",
             "refresh": "Perbarui",
             "preview": "Pratinjau",
             "download": "Unduh",
@@ -3968,6 +3968,19 @@
                 "invalid": "Periksa nama folder, koneksi, dan tampilan.",
                 "forbidden": "Anda tidak memiliki izin untuk tindakan ini.",
                 "preview": "Jenis berkas ini tidak dapat dipratinjau. Unduh dokumennya."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Perubahan disimpan langsung di Paperless. Pencarian menyaring tag yang dimuat; muat lebih banyak untuk melihat sisanya.",
+                "search": "Cari tag yang dimuat",
+                "assigned": "Tag dokumen",
+                "more": "Muat lebih banyak tag",
+                "empty": "Tidak ada tag yang ditetapkan.",
+                "selection": "{{count}} tag dipilih",
+                "changed": "Tag telah berubah di Paperless. Segarkan sebelum menyimpan.",
+                "forbidden": "Anda tidak berwenang mengubah tag ini.",
+                "invalid": "Tag tidak dapat disimpan. Segarkan dan coba lagi."
             }
         },
         "title": "Dokumen",

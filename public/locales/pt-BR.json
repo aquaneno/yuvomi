@@ -3883,7 +3883,7 @@
             "shared": "Família",
             "shareConsent": "Autorizo todas as pessoas com acesso a Documentos a ler e baixar os documentos atuais e futuros desta visualização.",
             "viewHint": "Alterações na visualização do Paperless também alteram esta pasta. Os arquivos permanecem no Paperless. Sem filtros, todos os documentos acessíveis pela conexão são incluídos.",
-            "readOnly": "Visualização atual do Paperless. Gerencie documentos e filtros no Paperless.",
+            "readOnly": "Os documentos e filtros permanecem no Paperless. Administradores autorizados podem alterar etiquetas aqui.",
             "refresh": "Atualizar",
             "preview": "Pré-visualizar",
             "download": "Baixar",
@@ -3906,6 +3906,19 @@
                 "invalid": "Verifique o nome da pasta, a conexão e a visualização.",
                 "forbidden": "Você não tem permissão para esta ação.",
                 "preview": "Este tipo de arquivo não permite prévia. Baixe o documento."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "As alterações são salvas diretamente no Paperless. A busca filtra as etiquetas carregadas; carregue mais para ver o restante.",
+                "search": "Buscar etiquetas carregadas",
+                "assigned": "Etiquetas do documento",
+                "more": "Carregar mais etiquetas",
+                "empty": "Nenhuma etiqueta atribuída.",
+                "selection": "{{count}} etiquetas selecionadas",
+                "changed": "As etiquetas mudaram no Paperless. Atualize antes de salvar.",
+                "forbidden": "Você não tem permissão para alterar estas etiquetas.",
+                "invalid": "Não foi possível salvar as etiquetas. Atualize e tente novamente."
             }
         },
         "title": "Documentos",

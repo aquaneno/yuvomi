@@ -3883,7 +3883,7 @@
             "shared": "家庭",
             "shareConsent": "我允許所有有權存取「文件」的人閱讀及下載此檢視中目前及未來的所有文件。",
             "viewHint": "在 Paperless 中修改此檢視也會變更此資料夾。檔案保留在 Paperless 中。沒有篩選條件時，將包含此連線可讀取的所有文件。",
-            "readOnly": "來自 Paperless 的目前檢視。請在 Paperless 中管理文件及篩選條件。",
+            "readOnly": "文件和篩選條件保留在 Paperless。獲授權的管理員可以在此變更標籤。",
             "refresh": "重新整理",
             "preview": "預覽",
             "download": "下載",
@@ -3906,6 +3906,19 @@
                 "invalid": "請檢查資料夾名稱、連線及檢視。",
                 "forbidden": "你無權執行此操作。",
                 "preview": "此檔案類型無法預覽。請下載文件。"
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "變更會直接儲存至 Paperless。搜尋會篩選已載入的標籤；請載入更多以查看其餘標籤。",
+                "search": "搜尋已載入的標籤",
+                "assigned": "文件標籤",
+                "more": "載入更多標籤",
+                "empty": "尚未指派標籤。",
+                "selection": "已選取 {{count}} 個標籤",
+                "changed": "Paperless 中的標籤已變更。請重新整理後再儲存。",
+                "forbidden": "你沒有變更這些標籤的權限。",
+                "invalid": "無法儲存標籤。請重新整理後再試。"
             }
         },
         "title": "文件",

@@ -3883,7 +3883,7 @@
             "shared": "Famiglia",
             "shareConsent": "Autorizzo tutte le persone con accesso a Documenti a leggere e scaricare i documenti attuali e futuri di questa vista.",
             "viewHint": "Le modifiche alla vista Paperless cambiano anche questa cartella. I file restano in Paperless. Senza filtri sono inclusi tutti i documenti leggibili dalla connessione.",
-            "readOnly": "Vista attuale da Paperless. Gestisci documenti e filtri in Paperless.",
+            "readOnly": "Documenti e filtri restano in Paperless. Gli amministratori autorizzati possono modificare i tag qui.",
             "refresh": "Aggiorna",
             "preview": "Anteprima",
             "download": "Scarica",
@@ -3906,6 +3906,19 @@
                 "invalid": "Controlla nome della cartella, connessione e vista.",
                 "forbidden": "Non hai il permesso per questa azione.",
                 "preview": "Anteprima non disponibile per questo tipo di file. Scarica il documento."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Le modifiche vengono salvate direttamente in Paperless. La ricerca filtra i tag caricati; caricane altri per vedere il resto.",
+                "search": "Cerca nei tag caricati",
+                "assigned": "Tag del documento",
+                "more": "Carica altri tag",
+                "empty": "Nessun tag assegnato.",
+                "selection": "{{count}} tag selezionati",
+                "changed": "I tag sono cambiati in Paperless. Aggiorna prima di salvare.",
+                "forbidden": "Non hai il permesso di modificare questi tag.",
+                "invalid": "Impossibile salvare i tag. Aggiorna e riprova."
             }
         },
         "title": "Documenti",

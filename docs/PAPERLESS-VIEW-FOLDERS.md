@@ -1,6 +1,7 @@
 # Paperless saved-view folders
 
-Documents can connect a saved Paperless view as a live, read-only folder.
+Documents can connect a saved Paperless view as a live folder with read access
+and administrator-controlled tag assignment.
 Nothing is copied into `family_documents`, and a document can appear in several
 views. This is a core extension, not a scheduled import.
 
@@ -15,6 +16,48 @@ views. This is a core extension, not a scheduled import.
 4. Keep the default Only me, or select Family and explicitly confirm sharing.
 5. Open the folder. Refresh or reopen it to get the current result; use Next
    for further pages. Preview opens a new tab; Download keeps the file's name.
+6. Use **Tags** on a document to see its live Paperless tags. The creating
+   administrator can select existing tags and save them directly to Paperless.
+   Individually linked Paperless documents offer the same **Tags** action in
+   their viewer (on mobile, in the actions menu).
+
+## Document tags
+
+The Paperless token needs read permission for documents and tags, and change
+permission for documents to save assignments. No new tags are created.
+Family readers can see names of the document's assigned tags; they cannot
+browse the account-wide tag catalogue or change assignments. Unreadable tag
+names appear as `#ID` and their assignment is preserved. Mutations require a
+Yuvomi administrator and Documents write access. For view folders, only the
+folder's creating administrator may mutate tags. For individually linked
+documents, an administrator must be able to see the local document.
+
+The editor loads existing assignments before enabling Save. The catalogue is
+paginated in batches of 100; **Load more tags** fetches subsequent pages.
+Search filters the loaded catalogue. Assigned tags on unloaded pages remain
+selected; unchecking every assigned tag explicitly removes all assignments.
+Cancel does not write. No file is copied and no database migration is needed.
+
+Before saving, Yuvomi rechecks visibility, account identity, current view
+membership and the previously loaded tag IDs. An intervening source change
+returns a conflict and requires Refresh. Paperless does not provide an atomic
+compare-and-swap through this implementation: another writer could still
+change tags between that check and the PATCH. Only the `tags` field is sent.
+After saving, the view is refreshed; a document may disappear if its new tags
+no longer match the saved filters. Errors keep the editor open and preserve
+the selection. All tag responses use `Cache-Control: no-store`.
+
+Endpoints below `/api/v1/documents/dms/paperless`:
+
+- `GET /tags?account_id=…&page=…`: administrator-only tag catalogue.
+- `GET|PUT /folders/:id/documents/:documentId/tags`: current view member.
+- `GET|PUT /documents/:id/tags`: visible individually linked local document ID.
+- PUT body: `{ "tags": [7, 12], "expected_tags": [7] }` (both arrays required).
+
+Automated validation: `npm run test:paperless-tags` (adapter and route tests),
+`npm run test:paperless-tags-browser` (full app and loopback Paperless API).
+These tests do not replace an acceptance check against your actual Paperless
+instance and its object permissions.
 
 Family sharing delegates permission to read/download **all current and future
 matches** to everyone who may read Documents in Yuvomi. This uses the

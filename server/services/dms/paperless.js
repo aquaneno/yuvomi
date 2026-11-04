@@ -199,6 +199,29 @@ export class PaperlessAdapter {
     };
   }
 
+  async listTags({ page = 1 } = {}) {
+    const result = await this.#viewPage(`/api/tags/?page=${positiveId(page) || 1}&page_size=100&ordering=name`);
+    return { ...result, results: result.results.filter((tag) => positiveId(tag.id))
+      .map(({ id, name }) => ({ id: Number(id), name: String(name ?? `#${id}`) })) };
+  }
+
+  async getTag(id) {
+    if (!positiveId(id)) throw new PaperlessViewError('Invalid tag ID.');
+    const tag = await (await this.#request(`/api/tags/${encodeURIComponent(id)}/`)).json();
+    return { id: Number(id), name: String(tag.name ?? `#${id}`) };
+  }
+
+  async setDocumentTags(id, tags) {
+    if (!positiveId(id) || !Array.isArray(tags) || tags.some((tag) => !Number.isSafeInteger(tag) || tag < 1)) {
+      throw new PaperlessViewError('Invalid document tags.');
+    }
+    const result = await (await this.#request(`/api/documents/${encodeURIComponent(id)}/`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tags }),
+    })).json();
+    return { tags: result.tags };
+  }
+
   // Vorschaubild der ersten Seite (Issue #533). Paperless-ngx rendert für jedes
   // Dokument ein Thumbnail (i. d. R. image/webp) unter /thumb/. Der Aufrufer prüft
   // den zurückgegebenen MIME-Typ gegen eine Bild-Allowlist, bevor er es inline

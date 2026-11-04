@@ -3945,7 +3945,7 @@
             "shared": "Family",
             "shareConsent": "I grant everyone with Documents access permission to read and download all current and future documents in this view.",
             "viewHint": "Changes to this saved view in Paperless also change this folder. Files remain in Paperless. An empty filter includes every document the connection can read.",
-            "readOnly": "Live view from Paperless. Manage documents and filters in Paperless.",
+            "readOnly": "Documents and filters stay in Paperless. Authorized administrators can change tags here.",
             "refresh": "Refresh",
             "preview": "Preview",
             "download": "Download",
@@ -3968,6 +3968,19 @@
                 "invalid": "Check the folder name, connection and view.",
                 "forbidden": "You do not have permission for this action.",
                 "preview": "This file type cannot be previewed. Download the document instead."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Changes are saved directly in Paperless. Search filters the loaded tags; load more to browse the complete catalogue.",
+                "search": "Search loaded tags",
+                "assigned": "Document tags",
+                "more": "Load more tags",
+                "empty": "No tags assigned.",
+                "selection": "Selected tags: {{count}}",
+                "changed": "The tags have changed in Paperless. Refresh before saving again.",
+                "forbidden": "You do not have permission to change these Paperless tags.",
+                "invalid": "The selected tags could not be saved. Refresh and try again."
             }
         },
         "title": "Documents",

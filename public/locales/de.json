@@ -3945,7 +3945,7 @@
             "shared": "Familie",
             "shareConsent": "Ich erlaube allen Personen mit Zugriff auf Dokumente, alle jetzigen und zukünftigen Dokumente dieser Ansicht zu lesen und herunterzuladen.",
             "viewHint": "Änderungen an der gespeicherten Ansicht in Paperless ändern auch diesen Ordner. Die Dateien bleiben in Paperless. Ein leerer Filter umfasst alle für die Verbindung lesbaren Dokumente.",
-            "readOnly": "Aktuelle Ansicht aus Paperless. Dokumente und Filter werden in Paperless verwaltet.",
+            "readOnly": "Dokumente und Filter bleiben in Paperless. Berechtigte Administratoren können hier Tags ändern.",
             "refresh": "Aktualisieren",
             "preview": "Vorschau",
             "download": "Herunterladen",
@@ -3968,6 +3968,19 @@
                 "invalid": "Prüfe Ordnername, Verbindung und Ansicht.",
                 "forbidden": "Du hast keine Berechtigung für diese Aktion.",
                 "preview": "Für diesen Dateityp gibt es keine Vorschau. Lade das Dokument stattdessen herunter."
+            },
+            "tags": {
+                "action": "Tags",
+                "title": "Tags: {{name}}",
+                "hint": "Änderungen werden direkt in Paperless gespeichert. Die Suche filtert die geladenen Tags; weitere Tags kannst du nachladen.",
+                "search": "Geladene Tags durchsuchen",
+                "assigned": "Dokument-Tags",
+                "more": "Weitere Tags laden",
+                "empty": "Keine Tags zugewiesen.",
+                "selection": "Ausgewählte Tags: {{count}}",
+                "changed": "Die Tags wurden zwischenzeitlich in Paperless geändert. Bitte vor dem Speichern aktualisieren.",
+                "forbidden": "Du hast keine Berechtigung, diese Paperless-Tags zu ändern.",
+                "invalid": "Die ausgewählten Tags konnten nicht gespeichert werden. Bitte aktualisieren und erneut versuchen."
             }
         },
         "title": "Dokumente",

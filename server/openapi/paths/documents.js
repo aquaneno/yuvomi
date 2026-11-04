@@ -3,6 +3,7 @@ import { op, jsonBody, idParam, withCaseReasons } from '../helpers.js';
 export function documentsPaths() {
   return withCaseReasons('documents', CASE_REASONS, {
     ...paperlessFolderPaths(),
+    ...paperlessTagPaths(),
     '/api/v1/documents/meta/options': {
       get: op({
         summary: 'Get family document options',
@@ -579,6 +580,45 @@ const CASE_REASONS = {
 };
 
 /** Virtual-folder IDs belong to their own namespace, never family_documents. */
+function paperlessTagPaths() {
+  const root = '/api/v1/documents/dms/paperless';
+  const error = { content: { 'application/json': { schema: { $ref: '#/components/schemas/ApiError' } } } };
+  const responses = {
+    200: { description: 'Live tag data; Cache-Control: no-store.' },
+    400: { ...error, description: 'paperless_tags_invalid' },
+    401: { $ref: '#/components/responses/Unauthorized' },
+    403: { ...error, description: 'Permission denied or Documents module/scope denied' },
+    404: { ...error, description: 'Document, folder or Paperless account not accessible' },
+    409: { ...error, description: 'paperless_tags_changed or paperless_folder_changed; reload before retrying' },
+    502: { ...error, description: 'paperless_unavailable' },
+    503: { ...error, description: 'restore_in_progress' },
+    500: { $ref: '#/components/responses/InternalServerError' },
+  };
+  const result = {
+    [`${root}/tags`]: { get: op({ summary: 'Browse existing Paperless tags', tag: 'Documents', admin: true,
+      description: 'Requires documents:write. Returns data [{id,name}], meta {page,count,has_more}; 100 tags per page. Never follows absolute pagination URLs.',
+      params: [{ name: 'account_id', in: 'query', required: true, schema: { type: 'integer', minimum: 1 } },
+        { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100000, default: 1 } }], responses }) },
+  };
+  for (const folder of [false, true]) {
+    const path = folder ? `${root}/folders/{id}/documents/{documentId}/tags` : `${root}/documents/{id}/tags`;
+    const params = [idParam(), ...(folder ? [{ name: 'documentId', in: 'path', required: true, schema: { type: 'integer', minimum: 1 } }] : [])];
+    const description = 'Requires Documents read access and a visible Paperless link or current saved-view match. '
+      + 'GET returns data {tags:[{id,name}],tag_ids,can_edit,account_id?}; hidden tag names fall back to #ID. '
+      + 'PUT requires documents:write and an administrator; folders additionally require their creating administrator. '
+      + 'Only tags are changed in Paperless. expected_tags must match the current tag IDs before PATCH; '
+      + 'this check detects intervening edits but is not an atomic compare-and-swap at Paperless. '
+      + 'Tag changes may remove the document from its saved view.';
+    result[path] = {
+      get: op({ summary: 'Read assigned Paperless document tags', tag: 'Documents', params, description, responses }),
+      put: op({ summary: 'Set existing Paperless document tags', tag: 'Documents', admin: true, stateChanging: true, params, description,
+        requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['tags', 'expected_tags'],
+          properties: Object.fromEntries(['tags', 'expected_tags'].map((name) => [name, { type: 'array', maxItems: 1000, items: { type: 'integer', minimum: 1 } }])) } } } }, responses }),
+    };
+  }
+  return result;
+}
+
 function paperlessFolderPaths() {
   const root = '/api/v1/documents/dms/paperless';
   const id = idParam();

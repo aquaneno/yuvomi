@@ -91,3 +91,25 @@ The branch contains the release tag exactly, rather than later commits on upstre
 main. Main and the previous feature branch were not changed by this check.
 
 AI assistance: implementation and compatibility work drafted with OpenAI Codex.
+
+## Tag extension, 2026-11-05
+
+Added live tag display and assignment for saved-view members and individually
+linked Paperless documents. Assignment is restricted to administrators with
+Documents write access; a view folder also requires its creating administrator.
+The catalogue is paginated, off-page assignments are preserved, and stale edits
+return a conflict. No migration is required.
+
+Validation: 701 passing cases across 15 targeted non-browser suites (tag routes,
+existing folder routes, DMS adapter/routes, general API, i18n/key parity,
+translations, count interpolation, viewer focus, read-only UI, document errors,
+OpenAPI coverage/structure/reasons and suite registration). The full-app browser
+case also passes: desktop and 390px layout, live names, adding/removing tags,
+pagination, HTML escaping, conflict/reload, explicit clearing, and removal from
+the saved view after a tag change. The screenshot was visually inspected.
+Browser requests outside loopback are aborted; the child app's fetch is also
+restricted to loopback, and weather requests are answered locally with no data.
+The local browser run used Chromium 138 through PUPPETEER_EXECUTABLE_PATH.
+
+The full project CI and acceptance against a real Paperless instance were not
+run for this extension. The browser uses a loopback Paperless API fixture.
