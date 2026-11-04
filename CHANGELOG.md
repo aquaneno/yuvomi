@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Saved Paperless views can be opened as live document folders.** Connect a
+  view in Documents, keep it private or explicitly share its current and future
+  matches with the family. Source filters, ordering and pagination are read on
+  demand; preview and download recheck membership. Disconnecting only removes
+  the binding. An optional module adds a separate Paperless navigation page.
+
+### Fixed
+- **The Paperless fork upgrades to Yuvomi 2.85.0 without losing folder bindings.**
+  Migration 278 preserves existing view folders and repairs the overlapping
+  migration 276 marker from the published 2.84 fork, including the pantry
+  product minimum backfill. Upstream migrations remain unchanged.
+
 ## [2.85.0] - 2026-11-04
 
 ### Added

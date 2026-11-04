@@ -11927,6 +11927,37 @@ const MIGRATIONS = [
       `);
     },
   },
+  {
+    version: 278,
+    description: 'Documents: read-only Paperless saved-view folders',
+    up: `
+      CREATE TABLE IF NOT EXISTS paperless_view_folders (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL CHECK(length(name) BETWEEN 1 AND 200),
+        account_id INTEGER NOT NULL REFERENCES dms_accounts(id) ON DELETE CASCADE,
+        view_id INTEGER NOT NULL CHECK(view_id > 0),
+        visibility TEXT NOT NULL DEFAULT 'private' CHECK(visibility IN ('private', 'family')),
+        created_by INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
+        updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+      );
+      CREATE INDEX IF NOT EXISTS idx_paperless_view_folders_account ON paperless_view_folders(account_id);
+    `,
+    // The published 2.84 fork already recorded its folder table as v276.
+    // Upstream now owns that number for pantry minimums. Repair precisely
+    // that legacy marker inside this migration's transaction, without
+    // changing any upstream migration or replacing saved folder bindings.
+    afterUp(database) {
+      const legacy = database.prepare('SELECT description FROM schema_migrations WHERE version = 276').get();
+      if (legacy?.description !== 'Documents: read-only Paperless saved-view folders') return;
+      const pantry = MIGRATIONS.find((migration) => migration.version === 276);
+      const columns = database.prepare('PRAGMA table_info(pantry_products)').all();
+      if (!columns.some((column) => column.name === 'min_quantity')) {
+        database.exec(pantry.up);
+      }
+      database.prepare('UPDATE schema_migrations SET description = ? WHERE version = 276').run(pantry.description);
+    },
+  },
 ];
 
 /**

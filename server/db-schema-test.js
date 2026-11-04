@@ -1597,6 +1597,19 @@ const MIGRATIONS_SQL = {
     ALTER TABLE notes ADD COLUMN locked INTEGER NOT NULL DEFAULT 0
       CHECK (locked IN (0, 1));
   `,
+  278: `
+      CREATE TABLE IF NOT EXISTS paperless_view_folders (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL CHECK(length(name) BETWEEN 1 AND 200),
+        account_id INTEGER NOT NULL REFERENCES dms_accounts(id) ON DELETE CASCADE,
+        view_id INTEGER NOT NULL CHECK(view_id > 0),
+        visibility TEXT NOT NULL DEFAULT 'private' CHECK(visibility IN ('private', 'family')),
+        created_by INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
+        updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+      );
+      CREATE INDEX IF NOT EXISTS idx_paperless_view_folders_account ON paperless_view_folders(account_id);
+  `,
 };
 
 export { MIGRATIONS_SQL };
