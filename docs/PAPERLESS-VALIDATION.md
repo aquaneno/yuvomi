@@ -113,3 +113,19 @@ The local browser run used Chromium 138 through PUPPETEER_EXECUTABLE_PATH.
 
 The full project CI and acceptance against a real Paperless instance were not
 run for this extension. The browser uses a loopback Paperless API fixture.
+
+
+## Complete tag selection, 2026-11-05
+
+The editor now shows `Name (ID: 7)` and automatically fetches all catalogue
+pages before enabling editing or saving. Search matches names and IDs;
+assignments outside the catalogue remain selected. Failed page loads keep
+saving disabled, and Refresh retries the full catalogue.
+
+Validation: all 9 adapter/route tests and 4 executable tag-editor regressions
+pass. The editor regressions fail against the preceding component. Locale
+parity, pluralization and suite registration pass. The frontend audit also
+checks focus restoration after refreshing the saved document view.
+The updated full-app desktop/mobile browser test could not run in this
+environment because neither Puppeteer's pinned Chrome nor a system Chrome
+is installed. Full-project CI and real-Paperless acceptance were not run.

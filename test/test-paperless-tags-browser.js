@@ -60,6 +60,11 @@ test('tags can be viewed and edited in folders and linked documents on desktop a
     await page.click('[data-pl-tags]');
     await page.waitForFunction(() => document.querySelector('.modal-panel [type="submit"]')?.disabled === false).catch(async (err) => { console.error('tag-test modal:', await page.$eval('.modal-panel', (el) => el.textContent).catch(() => 'missing')); throw err; });
     assert.equal(await page.$eval('[data-pl-tag-list] input[value="150"]', (el) => el.checked), true);
+    assert.equal(await page.$$eval('[data-pl-tag-list] input', (els) => els.length), 4);
+    assert.equal(await page.$eval('[data-pl-tag-list] input[value="151"]', (el) => el.parentElement.textContent.trim()), 'Another tag (ID: 151)');
+    await page.type('#pl-tag-search', '151');
+    assert.deepEqual(await page.$$eval('[data-pl-tag-list] input', (els) => els.map(el => el.value)), ['151']);
+    await page.$eval('#pl-tag-search', el => { el.value = ''; el.dispatchEvent(new Event('input')); });
     assert.equal(await page.$$eval('[data-pl-tag-list] img', (els) => els.length), 0, 'tag labels must be escaped');
     await page.click('[data-pl-tag-list] input[value="7"]');
     await page.click('[data-pl-tag-list] input[value="8"]');
@@ -75,7 +80,6 @@ test('tags can be viewed and edited in folders and linked documents on desktop a
     await page.waitForSelector('[data-action="paperless-tags"]');
     await clickPastDeadTime(page, '[data-action="paperless-tags"]');
     await page.waitForFunction(() => document.querySelector('.modal-panel [type="submit"]')?.disabled === false).catch(async (err) => { console.error('tag-test modal:', await page.$eval('.modal-panel', (el) => el.textContent).catch(() => 'missing')); throw err; });
-    await page.click('[data-pl-tag-more]');
     await page.waitForSelector('[data-pl-tag-list] input[value="151"]');
     await page.click('[data-pl-tag-list] input[value="151"]');
     // A concurrent source change produces a conflict; no silent overwrite.
@@ -103,3 +107,4 @@ test('tags can be viewed and edited in folders and linked documents on desktop a
     await new Promise((resolve) => sourceServer.close(resolve));
   }
 });
+

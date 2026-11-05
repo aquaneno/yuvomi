@@ -3910,8 +3910,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "Les modifications sont enregistrées directement dans Paperless. La recherche filtre les étiquettes chargées ; chargez-en davantage pour voir la suite.",
-                "search": "Rechercher les étiquettes chargées",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "Étiquettes du document",
                 "more": "Charger plus d’étiquettes",
                 "empty": "Aucune étiquette attribuée.",

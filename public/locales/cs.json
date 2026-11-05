@@ -4238,8 +4238,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "Změny se ukládají přímo do Paperless. Hledání filtruje načtené štítky; další lze načíst tlačítkem.",
-                "search": "Hledat načtené štítky",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "Štítky dokumentu",
                 "more": "Načíst další štítky",
                 "empty": "Žádné přiřazené štítky.",

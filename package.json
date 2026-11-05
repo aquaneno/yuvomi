@@ -632,7 +632,7 @@
     "test:paperless-folders": "node --test test/test-paperless-folders.js",
     "test:paperless-folders-browser": "node --test test/test-paperless-folders-browser.js",
     "test:paperless-folders-upgrade": "node --test test/test-paperless-folders-upgrade.js",
-    "test:paperless-tags": "node --test test/test-paperless-tags.js",
+    "test:paperless-tags": "node --test test/test-paperless-tags.js && node --loader ./test/test-browser-loader.mjs --test test/test-paperless-tags-ui.js",
     "test:paperless-tags-browser": "node --test test/test-paperless-tags-browser.js"
   },
   "dependencies": {

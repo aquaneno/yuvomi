@@ -3972,8 +3972,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "Änderungen werden direkt in Paperless gespeichert. Die Suche filtert die geladenen Tags; weitere Tags kannst du nachladen.",
-                "search": "Geladene Tags durchsuchen",
+                "hint": "Änderungen werden direkt in Paperless gespeichert. Alle vorhandenen Tags werden automatisch geladen. Suche nach Name oder ID.",
+                "search": "Tags nach Name oder ID durchsuchen",
                 "assigned": "Dokument-Tags",
                 "more": "Weitere Tags laden",
                 "empty": "Keine Tags zugewiesen.",

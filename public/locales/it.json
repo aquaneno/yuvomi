@@ -3910,8 +3910,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "Le modifiche vengono salvate direttamente in Paperless. La ricerca filtra i tag caricati; caricane altri per vedere il resto.",
-                "search": "Cerca nei tag caricati",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "Tag del documento",
                 "more": "Carica altri tag",
                 "empty": "Nessun tag assegnato.",

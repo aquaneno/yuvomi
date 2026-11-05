@@ -2,7 +2,7 @@
 import { api } from '/api.js';
 import { t } from '/i18n.js';
 import { esc } from '/utils/html.js';
-import { openModal, closeModal, captureModalContext, isModalContextCurrent } from '/components/modal.js';
+import { openModal, closeModal, captureModalContext, isModalContextCurrent, refocusAfterRender } from '/components/modal.js';
 
 const ROOT = '/documents/dms/paperless';
 const key = (name) => `documents.paperless.tags.${name}`;
@@ -24,7 +24,6 @@ export function openPaperlessTags({ path, title, signal, onSaved = () => {} }) {
       <label class="form-label" for="pl-tag-search">${esc(t(key('search')))}</label>
       <input type="search" class="form-input" id="pl-tag-search" disabled>
       <fieldset class="paperless-tags__choices" disabled><legend>${esc(t(key('assigned')))}</legend><div data-pl-tag-list></div></fieldset>
-      <button type="button" class="btn btn--ghost btn--sm" data-pl-tag-more hidden>${esc(t(key('more')))}</button>
       <p class="form-error" role="alert" data-pl-tag-error hidden></p>
       <div class="modal-panel__footer">
         <button type="button" class="btn btn--secondary" data-pl-tag-reload>${esc(t('documents.paperless.refresh'))}</button>
@@ -41,14 +40,12 @@ export function openPaperlessTags({ path, title, signal, onSaved = () => {} }) {
       const search = panel.querySelector('#pl-tag-search');
       const status = panel.querySelector('[data-pl-tag-status]');
       const error = panel.querySelector('[data-pl-tag-error]');
-      const more = panel.querySelector('[data-pl-tag-more]');
       const reload = panel.querySelector('[data-pl-tag-reload]');
       const save = panel.querySelector('[type="submit"]');
       let tags = new Map();
       let selected = new Set();
       let expected = [];
       let accountId;
-      let page = 0;
       let canEdit = false;
       let busy = false;
       let ready = false;
@@ -57,29 +54,34 @@ export function openPaperlessTags({ path, title, signal, onSaved = () => {} }) {
         busy = value;
         save.disabled = value || !ready;
         reload.disabled = value;
-        more.disabled = value;
-        fieldset.disabled = value || !canEdit;
+        search.disabled = value || !ready;
+        fieldset.disabled = value || !ready || !canEdit;
       }
       function draw() {
         const query = search.value.trim().toLocaleLowerCase();
-        const rows = [...tags.values()].filter((tag) => String(tag.name).toLocaleLowerCase().includes(query));
-        list.innerHTML = rows.map((tag) => `<label class="paperless-tags__choice"><input type="checkbox" value="${esc(tag.id)}" ${selected.has(tag.id) ? 'checked' : ''}> <span>${esc(tag.name)}</span></label>`).join('');
+        const rows = [...tags.values()]
+          .filter((tag) => `${tag.name} ${tag.id} #${tag.id}`.toLocaleLowerCase().includes(query))
+          .sort((a, b) => String(a.name).localeCompare(String(b.name)) || a.id - b.id);
+        list.replaceChildren();
+        list.insertAdjacentHTML('beforeend', rows.map((tag) => `<label class="paperless-tags__choice"><input type="checkbox" value="${esc(tag.id)}" ${selected.has(tag.id) ? 'checked' : ''}> <span>${esc(tag.name)} (ID: ${esc(tag.id)})</span></label>`).join(''));
         status.textContent = t(key(selected.size ? 'selection' : 'empty'), { count: selected.size });
       }
       async function catalogue() {
-        const result = await api.get(`${ROOT}/tags?account_id=${accountId}&page=${page + 1}`, { signal });
-        if (!current()) return;
-        page++;
-        for (const tag of result.data) tags.set(tag.id, tag);
-        more.hidden = !result.meta.has_more;
-        draw();
+        let page = 1;
+        let hasMore;
+        do {
+          const result = await api.get(`${ROOT}/tags?account_id=${accountId}&page=${page}`, { signal });
+          if (!current()) return;
+          for (const tag of result.data) tags.set(tag.id, tag);
+          hasMore = result.meta.has_more;
+          page++;
+        } while (hasMore && current());
       }
       async function load() {
         if (busy || !current()) return;
         ready = false;
         lock(true);
         error.hidden = true;
-        more.hidden = true;
         status.textContent = t('common.loading');
         try {
           const result = await api.get(path, { signal });
@@ -89,13 +91,11 @@ export function openPaperlessTags({ path, title, signal, onSaved = () => {} }) {
           tags = new Map(result.data.tags.map((tag) => [tag.id, tag]));
           accountId = result.data.account_id;
           canEdit = result.data.can_edit;
-          page = 0;
           search.value = '';
-          search.disabled = false;
           save.hidden = !canEdit;
-          draw();
           if (canEdit) await catalogue();
           if (!current()) return;
+          draw();
           ready = true;
         } catch (err) { if (current()) showError(err); }
         finally { if (current()) lock(false); }
@@ -108,12 +108,6 @@ export function openPaperlessTags({ path, title, signal, onSaved = () => {} }) {
         status.textContent = t(key(selected.size ? 'selection' : 'empty'), { count: selected.size });
       });
       reload.addEventListener('click', load);
-      more.addEventListener('click', async () => {
-        if (busy || !ready || !canEdit) return;
-        lock(true); error.hidden = true;
-        try { await catalogue(); } catch (err) { if (current()) showError(err); }
-        finally { if (current()) lock(false); }
-      });
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
         if (busy || !ready || !canEdit || !current()) return;
@@ -122,7 +116,10 @@ export function openPaperlessTags({ path, title, signal, onSaved = () => {} }) {
           await api.put(path, { tags: [...selected], expected_tags: expected });
           if (!current()) return;
           await closeModal({ force: true, context });
-          if (!signal?.aborted) await onSaved();
+          if (!signal?.aborted) {
+            await onSaved();
+            refocusAfterRender();
+          }
         } catch (err) {
           if (current()) {
             showError(err);

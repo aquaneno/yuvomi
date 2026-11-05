@@ -3972,8 +3972,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "A módosítások közvetlenül a Paperless rendszerbe kerülnek. A keresés a betöltött címkéket szűri; a többihez tölts be továbbiakat.",
-                "search": "Keresés a betöltött címkékben",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "Dokumentumcímkék",
                 "more": "További címkék betöltése",
                 "empty": "Nincs hozzárendelt címke.",

@@ -33,8 +33,9 @@ folder's creating administrator may mutate tags. For individually linked
 documents, an administrator must be able to see the local document.
 
 The editor loads existing assignments before enabling Save. The catalogue is
-paginated in batches of 100; **Load more tags** fetches subsequent pages.
-Search filters the loaded catalogue. Assigned tags on unloaded pages remain
+paginated in batches of 100; all pages load automatically before editing.
+Each choice shows the tag name and ID. Search filters the complete catalogue
+by name or ID. Assigned tags outside the catalogue remain
 selected; unchecking every assigned tag explicitly removes all assignments.
 Cancel does not write. No file is copied and no database migration is needed.
 
@@ -54,7 +55,7 @@ Endpoints below `/api/v1/documents/dms/paperless`:
 - `GET|PUT /documents/:id/tags`: visible individually linked local document ID.
 - PUT body: `{ "tags": [7, 12], "expected_tags": [7] }` (both arrays required).
 
-Automated validation: `npm run test:paperless-tags` (adapter and route tests),
+Automated validation: `npm run test:paperless-tags` (adapter, route and tag-editor tests),
 `npm run test:paperless-tags-browser` (full app and loopback Paperless API).
 These tests do not replace an acceptance check against your actual Paperless
 instance and its object permissions.

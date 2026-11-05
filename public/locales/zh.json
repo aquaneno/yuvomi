@@ -3910,8 +3910,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "更改会直接保存到 Paperless。搜索会筛选已加载的标签；请加载更多以查看其余标签。",
-                "search": "搜索已加载的标签",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "文档标签",
                 "more": "加载更多标签",
                 "empty": "尚未分配标签。",

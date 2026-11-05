@@ -3910,8 +3910,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "Ändringar sparas direkt i Paperless. Sökningen filtrerar inlästa taggar; läs in fler för att se resten.",
-                "search": "Sök bland inlästa taggar",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "Dokumenttaggar",
                 "more": "Läs in fler taggar",
                 "empty": "Inga taggar tilldelade.",

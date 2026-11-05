@@ -3972,8 +3972,8 @@
             "tags": {
                 "action": "Tags",
                 "title": "Tags: {{name}}",
-                "hint": "Thay đổi được lưu trực tiếp trong Paperless. Tìm kiếm lọc các thẻ đã tải; hãy tải thêm để xem phần còn lại.",
-                "search": "Tìm trong các thẻ đã tải",
+                "hint": "Changes are saved directly in Paperless. All existing tags load automatically. Search by name or ID.",
+                "search": "Search tags by name or ID",
                 "assigned": "Thẻ tài liệu",
                 "more": "Tải thêm thẻ",
                 "empty": "Chưa gán thẻ nào.",
