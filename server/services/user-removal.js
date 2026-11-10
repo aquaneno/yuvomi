@@ -115,6 +115,7 @@ export const PRIVATE_USER_COLUMNS = new Set([
   'cycle_settings.user_id',
   'cycle_settings.notify_partner_user_id',
   // Der eigene Schichtplan und die eigenen Abfuhr-Erinnerungen.
+  'school_timetables.user_id',
   'schedule_patterns.user_id',
   'schedule_overrides.user_id',
   'schedule_extra_shifts.user_id',

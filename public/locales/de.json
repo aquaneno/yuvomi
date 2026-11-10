@@ -177,7 +177,8 @@
         "rewards": "Belohnungen",
         "pantry": "Vorrat",
         "inventory": "Inventar",
-        "schedule": "Schichtplan"
+        "schedule": "Schichtplan",
+        "timetable": "Stundenplan"
     },
     "search": {
         "emptyHint": "Tippe, um zu einem Bereich zu springen oder etwas anzulegen. Ab 2 Zeichen findest du auch deine Einträge, sogar über Wortteile.",
@@ -6889,5 +6890,30 @@
         "body": "Yuvomi braucht ein paar Funktionen, die dieser Browser noch nicht kennt. Deine Daten sind davon nicht betroffen.",
         "versions": "Yuvomi läuft ab Chrome und Edge {{chrome}}, Firefox {{firefox}} und Safari {{safari}}, auf iPhone und iPad ab iOS {{ios}}.",
         "action": "Aktualisiere den Browser oder das Gerät und versuche es dann erneut. Geht das nicht, öffne Yuvomi in einem anderen Browser."
+    },
+    "timetable": {
+        "subjects": "Fächer",
+        "teacher": "Lehrkraft",
+        "room": "Raum",
+        "lesson": "Stunde",
+        "break": "Pause",
+        "member": "Familienmitglied",
+        "times": "Unterrichtszeiten",
+        "addSubject": "Fach hinzufügen",
+        "choose": "Auswählen",
+        "free": "Freistunde",
+        "place": "Hier einsetzen",
+        "move": "Verschieben",
+        "days": "Wochentage",
+        "addLesson": "Stunde hinzufügen",
+        "addBreak": "Pause hinzufügen",
+        "empty": "Lege dein erstes Fach an.",
+        "hint": "Ziehe Fächer in freie Stunden oder wähle ein Fach und klicke eine Stunde an. Klicke belegte Stunden zum Ändern, Verschieben oder Leeren an.",
+        "readOnly": "Du kannst diesen Plan ansehen. Bearbeiten dürfen ihn die Person selbst und Administratoren.",
+        "removeHint": "Beim Entfernen von Fächern, Stunden oder Wochentagen werden auch deren Belegungen entfernt.",
+        "conflict": "Dieser Plan wurde in einem anderen Fenster geändert. Lade ihn vor dem Bearbeiten neu.",
+        "timesError": "Zeiten müssen gültig, aufsteigend und ohne Überschneidungen sein. Mindestens eine Unterrichtsstunde muss bleiben.",
+        "invalid": "Prüfe die Einträge und Grenzen: 60 Fächer, 30 Zeitabschnitte.",
+        "noMembers": "Keine Haushaltsmitglieder verfügbar."
     }
 }

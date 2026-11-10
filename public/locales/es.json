@@ -177,7 +177,8 @@
         "rewards": "Recompensas",
         "pantry": "Despensa",
         "inventory": "Inventario",
-        "schedule": "Turnos"
+        "schedule": "Turnos",
+        "timetable": "Horario escolar"
     },
     "dashboard": {
         "title": "Inicio",
@@ -6889,5 +6890,30 @@
         "body": "Yuvomi necesita algunas funciones que este navegador aún no tiene. Tus datos no se ven afectados.",
         "versions": "Yuvomi funciona desde Chrome y Edge {{chrome}}, Firefox {{firefox}} y Safari {{safari}}, y en iPhone y iPad desde iOS {{ios}}.",
         "action": "Actualiza el navegador o el dispositivo y vuelve a intentarlo. Si no es posible, abre Yuvomi en otro navegador."
+    },
+    "timetable": {
+        "subjects": "Asignaturas",
+        "teacher": "Docente",
+        "room": "Aula",
+        "lesson": "Clase",
+        "break": "Recreo",
+        "member": "Familiar",
+        "times": "Horas de clase",
+        "addSubject": "Añadir asignatura",
+        "choose": "Elegir",
+        "free": "Hora libre",
+        "place": "Colocar aquí",
+        "move": "Mover",
+        "days": "Días de la semana",
+        "addLesson": "Añadir clase",
+        "addBreak": "Añadir recreo",
+        "empty": "Crea tu primera asignatura.",
+        "hint": "Arrastra una asignatura a una hora libre o selecciónala y pulsa una hora. Pulsa una clase para cambiarla, moverla o quitarla.",
+        "readOnly": "Solo el propietario y los administradores pueden editar este horario.",
+        "removeHint": "Al quitar asignaturas, horas o días también se eliminan sus asignaciones.",
+        "conflict": "Este horario ha cambiado en otra ventana. Recárgalo antes de editarlo.",
+        "timesError": "Las horas deben ser válidas, crecientes y sin solapamientos. Conserva al menos una clase.",
+        "invalid": "Revisa los datos: máximo 60 asignaturas y 30 franjas.",
+        "noMembers": "No hay miembros del hogar disponibles."
     }
 }

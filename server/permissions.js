@@ -66,6 +66,7 @@ export const PERMISSION_MODULES = Object.freeze([
   { key: 'waste',        labelKey: 'nav.waste',        icon: 'trash-2',       navIds: ['waste'] },
   { key: 'rewards',      labelKey: 'nav.rewards',      icon: 'award',         navIds: ['rewards'] },
   { key: 'health',       labelKey: 'nav.health',       icon: 'heart-pulse',   navIds: ['health'] },
+  { key: 'timetable', labelKey: 'nav.timetable', icon: 'graduation-cap', navIds: ['timetable'] },
   { key: 'schedule',     labelKey: 'nav.schedule',     icon: 'calendar-clock', navIds: ['schedule'] },
 ]);
 

@@ -42,6 +42,7 @@ import {
 const MODULE_ACCENT = {
   calendar: 'var(--module-calendar)',
   schedule: 'var(--module-schedule)',
+  timetable: 'var(--module-timetable)',
   tasks: 'var(--module-tasks)',
   notes: 'var(--module-notes)',
   contacts: 'var(--module-contacts)',
@@ -74,6 +75,7 @@ const WIDGET_LABEL_KEYS = {
   cycle: 'settings.permWidgetCycle',
   housekeeping: 'nav.housekeeping',
   schedule: 'nav.schedule',
+  timetable: 'nav.timetable',
   waste: 'nav.waste',
   // Der Name der Kachel selbst, wie beim Countdown: „Vorrat" hiesse hier das
   // Modul, gesperrt wird aber nur die eine Kachel darueber.

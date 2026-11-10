@@ -1902,6 +1902,7 @@ Kernseite fuehrt es. Die Zuordnung aller Seiten:
 | `documents.js` Dokumente | Flaeche | `full` |
 | `health-fasting.js` Fasten | Flaeche | Bereich der Gesundheit |
 | `schedule.js` Schichtplan | Flaeche | `full` |
+| `timetable.js` | Flaeche | Wochenraster mit Fachablage und Unterrichtsstunden. |
 | `budget.js` Budget | Flaeche | `reading` mit eigener Bahn |
 | `budget-stats.js` Budget-Statistik | Flaeche | Reiter des Budgets |
 | `budget-plans.js` Budget-Plan | Flaeche | Reiter des Budgets |

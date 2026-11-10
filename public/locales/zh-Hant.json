@@ -177,7 +177,8 @@
         "rewards": "獎勵",
         "pantry": "庫存",
         "inventory": "物品",
-        "schedule": "排班"
+        "schedule": "排班",
+        "timetable": "課程表"
     },
     "dashboard": {
         "title": "概覽",
@@ -6889,5 +6890,30 @@
         "body": "Yuvomi 需要一些此瀏覽器尚未支援的功能。你的資料不受影響。",
         "versions": "Yuvomi 支援 Chrome 和 Edge {{chrome}}、Firefox {{firefox}} 和 Safari {{safari}} 以上版本，iPhone 和 iPad 需 iOS {{ios}} 以上。",
         "action": "請更新瀏覽器或裝置後重試。如果無法更新，請在其他瀏覽器中開啟 Yuvomi。"
+    },
+    "timetable": {
+        "subjects": "科目",
+        "teacher": "教師",
+        "room": "教室",
+        "lesson": "節課",
+        "break": "下課休息",
+        "member": "家庭成員",
+        "times": "上課時間",
+        "addSubject": "新增科目",
+        "choose": "選擇",
+        "free": "空堂",
+        "place": "放在這裡",
+        "move": "移動",
+        "days": "每週天數",
+        "addLesson": "新增課時",
+        "addBreak": "新增休息",
+        "empty": "建立第一個科目。",
+        "hint": "將科目拖到空堂，或先選科目再點選課時。點選已有課程可修改、移動或清空。",
+        "readOnly": "只有本人和管理員可以編輯此課表。",
+        "removeHint": "刪除科目、課時或星期時，也會刪除對應的課程安排。",
+        "conflict": "此課表已在其他視窗變更，請重新載入後再編輯。",
+        "timesError": "時間必須有效、遞增且不能重疊，至少保留一節課。",
+        "invalid": "請檢查輸入：最多60個科目、30個時段。",
+        "noMembers": "沒有可用的家庭成員。"
     }
 }

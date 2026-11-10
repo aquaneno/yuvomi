@@ -12007,6 +12007,21 @@ const MIGRATIONS = [
       }
     },
   },
+  {
+    version: 283,
+    description: 'School timetables: per-member weekly plan with versioned subjects, lesson slots and breaks',
+    /** @param {any} database */
+    up(database) {
+      database.exec(`
+        CREATE TABLE school_timetables (
+          user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+          data TEXT NOT NULL CHECK(json_valid(data)),
+          revision INTEGER NOT NULL DEFAULT 1 CHECK(revision > 0),
+          updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
+        );
+      `);
+    },
+  },
 ];
 
 /**

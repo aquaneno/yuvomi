@@ -177,7 +177,8 @@
         "rewards": "Beloningen",
         "pantry": "Voorraad",
         "inventory": "Inventaris",
-        "schedule": "Dienstrooster"
+        "schedule": "Dienstrooster",
+        "timetable": "Lesrooster"
     },
     "dashboard": {
         "title": "Overzicht",
@@ -6889,5 +6890,30 @@
         "body": "Yuvomi heeft een paar functies nodig die deze browser nog niet kent. Je gegevens blijven daarbuiten.",
         "versions": "Yuvomi werkt vanaf Chrome en Edge {{chrome}}, Firefox {{firefox}} en Safari {{safari}}, en op iPhone en iPad vanaf iOS {{ios}}.",
         "action": "Werk de browser of het apparaat bij en probeer het dan opnieuw. Lukt dat niet, open Yuvomi dan in een andere browser."
+    },
+    "timetable": {
+        "subjects": "Vakken",
+        "teacher": "Docent",
+        "room": "Lokaal",
+        "lesson": "Les",
+        "break": "Pauze",
+        "member": "Gezinslid",
+        "times": "Lestijden",
+        "addSubject": "Vak toevoegen",
+        "choose": "Kiezen",
+        "free": "Vrij uur",
+        "place": "Hier plaatsen",
+        "move": "Verplaatsen",
+        "days": "Weekdagen",
+        "addLesson": "Les toevoegen",
+        "addBreak": "Pauze toevoegen",
+        "empty": "Maak je eerste vak aan.",
+        "hint": "Sleep een vak naar een vrij uur of kies het en klik op een uur. Klik op een les om die te wijzigen, verplaatsen of wissen.",
+        "readOnly": "Alleen de eigenaar en beheerders kunnen dit rooster bewerken.",
+        "removeHint": "Als je vakken, uren of dagen verwijdert, verdwijnen ook hun toewijzingen.",
+        "conflict": "Dit rooster is in een ander venster gewijzigd. Laad het opnieuw voor je het bewerkt.",
+        "timesError": "Tijden moeten geldig, oplopend en zonder overlap zijn. Behoud minstens één les.",
+        "invalid": "Controleer de invoer: maximaal 60 vakken en 30 tijdvakken.",
+        "noMembers": "Geen gezinsleden beschikbaar."
     }
 }

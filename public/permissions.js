@@ -22,6 +22,7 @@
 const NAV_TO_MODULE = Object.freeze({
   calendar: 'calendar',
   schedule: 'schedule',
+  timetable: 'timetable',
   birthdays: 'calendar',
   tasks: 'tasks',
   notes: 'notes',

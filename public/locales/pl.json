@@ -195,7 +195,8 @@
         "rewards": "Nagrody",
         "pantry": "Spiżarnia",
         "inventory": "Inwentarz",
-        "schedule": "Grafik"
+        "schedule": "Grafik",
+        "timetable": "Plan lekcji"
     },
     "search": {
         "emptyHint": "Pisz, aby przejść do obszaru lub coś utworzyć. Od 2 znaków znajdziesz też swoje wpisy, nawet po fragmentach słów.",
@@ -7231,5 +7232,30 @@
         "body": "Yuvomi potrzebuje kilku funkcji, których ta przeglądarka jeszcze nie zna. Twoje dane nie są tym objęte.",
         "versions": "Yuvomi działa od Chrome i Edge {{chrome}}, Firefox {{firefox}} i Safari {{safari}}, a na iPhonie i iPadzie od iOS {{ios}}.",
         "action": "Zaktualizuj przeglądarkę lub urządzenie i spróbuj ponownie. Jeśli to niemożliwe, otwórz Yuvomi w innej przeglądarce."
+    },
+    "timetable": {
+        "subjects": "Przedmioty",
+        "teacher": "Nauczyciel",
+        "room": "Sala",
+        "lesson": "Lekcja",
+        "break": "Przerwa",
+        "member": "Członek rodziny",
+        "times": "Godziny lekcji",
+        "addSubject": "Dodaj przedmiot",
+        "choose": "Wybierz",
+        "free": "Wolna godzina",
+        "place": "Umieść tutaj",
+        "move": "Przenieś",
+        "days": "Dni tygodnia",
+        "addLesson": "Dodaj lekcję",
+        "addBreak": "Dodaj przerwę",
+        "empty": "Utwórz pierwszy przedmiot.",
+        "hint": "Przeciągnij przedmiot na wolną godzinę lub wybierz go i kliknij godzinę. Kliknij lekcję, aby ją zmienić, przenieść lub usunąć.",
+        "readOnly": "Tylko właściciel i administratorzy mogą edytować ten plan.",
+        "removeHint": "Usunięcie przedmiotów, godzin lub dni usuwa też ich przypisania.",
+        "conflict": "Plan zmienił się w innym oknie. Wczytaj go ponownie przed edycją.",
+        "timesError": "Godziny muszą być poprawne, rosnące i bez nakładania. Zachowaj co najmniej jedną lekcję.",
+        "invalid": "Sprawdź dane: maksymalnie 60 przedmiotów i 30 przedziałów.",
+        "noMembers": "Brak dostępnych domowników."
     }
 }

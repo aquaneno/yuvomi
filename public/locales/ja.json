@@ -177,7 +177,8 @@
         "rewards": "ごほうび",
         "pantry": "在庫",
         "inventory": "持ち物",
-        "schedule": "シフト表"
+        "schedule": "シフト表",
+        "timetable": "時間割"
     },
     "dashboard": {
         "title": "ダッシュボード",
@@ -6889,5 +6890,30 @@
         "body": "Yuvomi には、このブラウザがまだ対応していない機能が必要です。データには影響ありません。",
         "versions": "Yuvomi は Chrome と Edge {{chrome}}、Firefox {{firefox}}、Safari {{safari}} 以降、iPhone と iPad では iOS {{ios}} 以降で動作します。",
         "action": "ブラウザまたは端末をアップデートしてから、もう一度お試しください。それができない場合は、別のブラウザで Yuvomi を開いてください。"
+    },
+    "timetable": {
+        "subjects": "教科",
+        "teacher": "先生",
+        "room": "教室",
+        "lesson": "授業",
+        "break": "休み時間",
+        "member": "家族",
+        "times": "授業時間",
+        "addSubject": "教科を追加",
+        "choose": "選択",
+        "free": "空き時間",
+        "place": "ここに配置",
+        "move": "移動",
+        "days": "曜日数",
+        "addLesson": "授業を追加",
+        "addBreak": "休み時間を追加",
+        "empty": "最初の教科を作成してください。",
+        "hint": "教科を空き時間へドラッグするか、教科を選んで時間を押してください。授業を押すと変更・移動・削除できます。",
+        "readOnly": "編集できるのは本人と管理者のみです。",
+        "removeHint": "教科・時間・曜日を削除すると、その割り当ても削除されます。",
+        "conflict": "別の画面で時間割が変更されました。再読み込みしてから編集してください。",
+        "timesError": "時間は有効な値で昇順にし、重複を避けてください。授業を一つ以上残してください。",
+        "invalid": "入力を確認してください。教科は60件、時間枠は30件までです。",
+        "noMembers": "利用できる家族がいません。"
     }
 }
