@@ -72,3 +72,10 @@ export function cleanTimetable(plan) {
     entries: plan.entries.map(({ day, slot_id, subject_id }) => ({ day, slot_id, subject_id })),
   };
 }
+
+/** Random IDs also work on LAN HTTP, where crypto.randomUUID is unavailable. */
+export function newId() {
+  const bytes = new Uint8Array(16);
+  globalThis.crypto.getRandomValues(bytes);
+  return 's-' + Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+}

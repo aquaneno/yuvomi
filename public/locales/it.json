@@ -177,8 +177,7 @@
         "rewards": "Ricompense",
         "pantry": "Dispensa",
         "inventory": "Inventario",
-        "schedule": "Turni",
-        "timetable": "Orario scolastico"
+        "schedule": "Turni"
     },
     "dashboard": {
         "title": "Panoramica",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi ha bisogno di alcune funzioni che questo browser non conosce ancora. I tuoi dati non ne sono toccati.",
         "versions": "Yuvomi funziona da Chrome ed Edge {{chrome}}, Firefox {{firefox}} e Safari {{safari}}, e su iPhone e iPad da iOS {{ios}}.",
         "action": "Aggiorna il browser o il dispositivo, poi riprova. Se non è possibile, apri Yuvomi in un altro browser."
-    },
-    "timetable": {
-        "subjects": "Materie",
-        "teacher": "Docente",
-        "room": "Aula",
-        "lesson": "Lezione",
-        "break": "Pausa",
-        "member": "Familiare",
-        "times": "Orari delle lezioni",
-        "addSubject": "Aggiungi materia",
-        "choose": "Scegli",
-        "free": "Ora libera",
-        "place": "Inserisci qui",
-        "move": "Sposta",
-        "days": "Giorni della settimana",
-        "addLesson": "Aggiungi lezione",
-        "addBreak": "Aggiungi pausa",
-        "empty": "Crea la prima materia.",
-        "hint": "Trascina una materia in un’ora libera oppure sceglila e premi un’ora. Premi una lezione per modificarla, spostarla o rimuoverla.",
-        "readOnly": "Solo il proprietario e gli amministratori possono modificare questo orario.",
-        "removeHint": "Rimuovere materie, ore o giorni elimina anche le relative assegnazioni.",
-        "conflict": "L’orario è cambiato in un’altra finestra. Ricaricalo prima di modificarlo.",
-        "timesError": "Gli orari devono essere validi, crescenti e senza sovrapposizioni. Mantieni almeno una lezione.",
-        "invalid": "Controlla i dati: massimo 60 materie e 30 fasce orarie.",
-        "noMembers": "Nessun membro della famiglia disponibile."
     }
 }

@@ -177,8 +177,7 @@
         "rewards": "Ödüller",
         "pantry": "Kiler",
         "inventory": "Envanter",
-        "schedule": "Vardiya planı",
-        "timetable": "Ders programı"
+        "schedule": "Vardiya planı"
     },
     "dashboard": {
         "title": "Genel Bakış",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi, bu tarayıcının henüz bilmediği bazı özelliklere ihtiyaç duyuyor. Verilerin bundan etkilenmez.",
         "versions": "Yuvomi; Chrome ve Edge {{chrome}}, Firefox {{firefox}} ve Safari {{safari}} sürümünden itibaren, iPhone ve iPad'de iOS {{ios}} sürümünden itibaren çalışır.",
         "action": "Tarayıcıyı veya cihazı güncelle, ardından tekrar dene. Bu mümkün değilse Yuvomi'yi başka bir tarayıcıda aç."
-    },
-    "timetable": {
-        "subjects": "Dersler",
-        "teacher": "Öğretmen",
-        "room": "Derslik",
-        "lesson": "Ders",
-        "break": "Teneffüs",
-        "member": "Aile üyesi",
-        "times": "Ders saatleri",
-        "addSubject": "Ders ekle",
-        "choose": "Seç",
-        "free": "Boş ders",
-        "place": "Buraya yerleştir",
-        "move": "Taşı",
-        "days": "Haftanın günleri",
-        "addLesson": "Ders saati ekle",
-        "addBreak": "Teneffüs ekle",
-        "empty": "İlk dersinizi oluşturun.",
-        "hint": "Dersi boş saate sürükleyin veya seçip saate tıklayın. Değiştirmek, taşımak ya da silmek için dolu saate tıklayın.",
-        "readOnly": "Bu programı yalnızca sahibi ve yöneticiler düzenleyebilir.",
-        "removeHint": "Dersleri, saatleri veya günleri kaldırmak bunların atamalarını da siler.",
-        "conflict": "Program başka bir pencerede değişti. Düzenlemeden önce yeniden yükleyin.",
-        "timesError": "Saatler geçerli, artan sırada ve çakışmasız olmalıdır. En az bir ders bırakın.",
-        "invalid": "Verileri kontrol edin: en fazla 60 ders ve 30 zaman aralığı.",
-        "noMembers": "Kullanılabilir hane üyesi yok."
     }
 }

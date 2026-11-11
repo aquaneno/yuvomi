@@ -177,8 +177,7 @@
         "rewards": "Hadiah",
         "pantry": "Persediaan",
         "inventory": "Inventaris",
-        "schedule": "Jadwal shift",
-        "timetable": "Jadwal pelajaran"
+        "schedule": "Jadwal shift"
     },
     "search": {
         "emptyHint": "Ketik untuk membuka bagian atau membuat sesuatu. Mulai 2 karakter, entri kamu juga ditemukan, bahkan dengan potongan kata.",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi memerlukan beberapa fitur yang belum dikenal browser ini. Datamu tidak terpengaruh.",
         "versions": "Yuvomi berjalan mulai Chrome dan Edge {{chrome}}, Firefox {{firefox}}, dan Safari {{safari}}, serta di iPhone dan iPad mulai iOS {{ios}}.",
         "action": "Perbarui browser atau perangkat, lalu coba lagi. Jika tidak bisa, buka Yuvomi di browser lain."
-    },
-    "timetable": {
-        "subjects": "Mata pelajaran",
-        "teacher": "Guru",
-        "room": "Ruang",
-        "lesson": "Pelajaran",
-        "break": "Istirahat",
-        "member": "Anggota keluarga",
-        "times": "Waktu pelajaran",
-        "addSubject": "Tambah mata pelajaran",
-        "choose": "Pilih",
-        "free": "Jam kosong",
-        "place": "Tempatkan di sini",
-        "move": "Pindahkan",
-        "days": "Hari dalam seminggu",
-        "addLesson": "Tambah pelajaran",
-        "addBreak": "Tambah istirahat",
-        "empty": "Buat mata pelajaran pertama.",
-        "hint": "Seret mata pelajaran ke jam kosong, atau pilih lalu klik jam. Klik pelajaran untuk mengubah, memindahkan, atau menghapusnya.",
-        "readOnly": "Hanya pemilik dan administrator yang dapat mengubah jadwal ini.",
-        "removeHint": "Menghapus mata pelajaran, jam, atau hari juga menghapus penempatannya.",
-        "conflict": "Jadwal berubah di jendela lain. Muat ulang sebelum mengedit.",
-        "timesError": "Waktu harus valid, berurutan, dan tidak tumpang tindih. Sisakan setidaknya satu pelajaran.",
-        "invalid": "Periksa data: maksimal 60 mata pelajaran dan 30 slot waktu.",
-        "noMembers": "Tidak ada anggota rumah tangga yang tersedia."
     }
 }

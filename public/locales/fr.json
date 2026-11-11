@@ -177,8 +177,7 @@
         "rewards": "Récompenses",
         "pantry": "Réserve",
         "inventory": "Inventaire",
-        "schedule": "Planning",
-        "timetable": "Emploi du temps"
+        "schedule": "Planning"
     },
     "dashboard": {
         "title": "Accueil",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi a besoin de quelques fonctions que ce navigateur ne connaît pas encore. Tes données ne sont pas concernées.",
         "versions": "Yuvomi fonctionne à partir de Chrome et Edge {{chrome}}, Firefox {{firefox}} et Safari {{safari}}, et sur iPhone et iPad à partir d’iOS {{ios}}.",
         "action": "Mets à jour le navigateur ou l’appareil, puis réessaie. Si ce n’est pas possible, ouvre Yuvomi dans un autre navigateur."
-    },
-    "timetable": {
-        "subjects": "Matières",
-        "teacher": "Enseignant",
-        "room": "Salle",
-        "lesson": "Cours",
-        "break": "Pause",
-        "member": "Membre de la famille",
-        "times": "Horaires des cours",
-        "addSubject": "Ajouter une matière",
-        "choose": "Choisir",
-        "free": "Heure libre",
-        "place": "Placer ici",
-        "move": "Déplacer",
-        "days": "Jours de la semaine",
-        "addLesson": "Ajouter un cours",
-        "addBreak": "Ajouter une pause",
-        "empty": "Créez votre première matière.",
-        "hint": "Glissez une matière vers une heure libre, ou choisissez-la puis cliquez sur une heure. Cliquez sur un cours pour le modifier, déplacer ou effacer.",
-        "readOnly": "Seuls le propriétaire et les administrateurs peuvent modifier ce planning.",
-        "removeHint": "Supprimer une matière, une heure ou un jour supprime aussi ses affectations.",
-        "conflict": "Ce planning a changé ailleurs. Rechargez-le avant de le modifier.",
-        "timesError": "Les horaires doivent être valides, croissants et sans chevauchement. Gardez au moins un cours.",
-        "invalid": "Vérifiez les données : 60 matières et 30 créneaux au maximum.",
-        "noMembers": "Aucun membre du foyer disponible."
     }
 }

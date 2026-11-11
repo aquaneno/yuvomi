@@ -1,4 +1,3 @@
-import { timetablePaths } from './timetable.js';
 import { corePaths } from './core.js';
 import { authPaths } from './auth.js';
 import { emailPaths } from './email.js';
@@ -40,7 +39,6 @@ import { permissionsPaths } from './permissions.js';
 export function buildPaths() {
   return {
     ...corePaths(),
-    ...timetablePaths(),
     ...authPaths(),
     ...emailPaths(),
     ...familyPaths(),

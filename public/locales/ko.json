@@ -177,8 +177,7 @@
         "rewards": "보상",
         "pantry": "재고",
         "inventory": "소지품",
-        "schedule": "근무표",
-        "timetable": "시간표"
+        "schedule": "근무표"
     },
     "search": {
         "emptyHint": "입력해서 영역으로 이동하거나 새로 만드세요. 2자부터는 내 항목도 찾을 수 있고, 단어의 일부로도 됩니다.",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi에는 이 브라우저가 아직 지원하지 않는 기능이 필요합니다. 데이터에는 영향이 없습니다.",
         "versions": "Yuvomi는 Chrome 및 Edge {{chrome}}, Firefox {{firefox}}, Safari {{safari}} 이상, iPhone과 iPad에서는 iOS {{ios}} 이상에서 작동합니다.",
         "action": "브라우저나 기기를 업데이트한 뒤 다시 시도하세요. 업데이트할 수 없다면 다른 브라우저에서 Yuvomi를 여세요."
-    },
-    "timetable": {
-        "subjects": "과목",
-        "teacher": "교사",
-        "room": "교실",
-        "lesson": "수업",
-        "break": "쉬는 시간",
-        "member": "가족 구성원",
-        "times": "수업 시간",
-        "addSubject": "과목 추가",
-        "choose": "선택",
-        "free": "빈 시간",
-        "place": "여기에 배치",
-        "move": "이동",
-        "days": "요일 수",
-        "addLesson": "수업 추가",
-        "addBreak": "쉬는 시간 추가",
-        "empty": "첫 과목을 만들어 보세요.",
-        "hint": "과목을 빈 시간으로 끌거나 과목을 선택하고 시간을 누르세요. 수업을 누르면 변경, 이동 또는 삭제할 수 있습니다.",
-        "readOnly": "본인과 관리자만 이 시간표를 수정할 수 있습니다.",
-        "removeHint": "과목, 시간 또는 요일을 삭제하면 해당 배치도 삭제됩니다.",
-        "conflict": "다른 창에서 시간표가 변경되었습니다. 다시 불러온 후 수정하세요.",
-        "timesError": "시간은 올바른 값으로 오름차순이어야 하며 겹치면 안 됩니다. 수업을 하나 이상 남겨 두세요.",
-        "invalid": "입력을 확인하세요. 과목은 60개, 시간대는 30개까지 가능합니다.",
-        "noMembers": "이용 가능한 가족 구성원이 없습니다."
     }
 }

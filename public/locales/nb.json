@@ -177,8 +177,7 @@
         "rewards": "Belønninger",
         "pantry": "Spiskammer",
         "inventory": "Inventar",
-        "schedule": "Planlegging",
-        "timetable": "Timeplan"
+        "schedule": "Planlegging"
     },
     "dashboard": {
         "title": "Oversikt",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi trenger noen funksjoner som denne nettleseren ikke har ennå. Dataene dine berøres ikke.",
         "versions": "Yuvomi fungerer fra Chrome og Edge {{chrome}}, Firefox {{firefox}} og Safari {{safari}}, og på iPhone og iPad fra iOS {{ios}}.",
         "action": "Oppdater nettleseren eller enheten, og prøv igjen. Går ikke det, åpner du Yuvomi i en annen nettleser."
-    },
-    "timetable": {
-        "subjects": "Fag",
-        "teacher": "Lærer",
-        "room": "Rom",
-        "lesson": "Time",
-        "break": "Pause",
-        "member": "Familiemedlem",
-        "times": "Undervisningstider",
-        "addSubject": "Legg til fag",
-        "choose": "Velg",
-        "free": "Fritime",
-        "place": "Plasser her",
-        "move": "Flytt",
-        "days": "Ukedager",
-        "addLesson": "Legg til time",
-        "addBreak": "Legg til pause",
-        "empty": "Opprett ditt første fag.",
-        "hint": "Dra et fag til en ledig time, eller velg det og klikk på en time. Klikk på en time for å endre, flytte eller tømme den.",
-        "readOnly": "Bare eieren og administratorer kan redigere denne timeplanen.",
-        "removeHint": "Når fag, timer eller dager fjernes, fjernes også tilordningene.",
-        "conflict": "Timeplanen er endret i et annet vindu. Last inn på nytt før redigering.",
-        "timesError": "Tidene må være gyldige, stigende og uten overlapp. Behold minst én time.",
-        "invalid": "Kontroller dataene: høyst 60 fag og 30 tidsfelt.",
-        "noMembers": "Ingen husstandsmedlemmer tilgjengelige."
     }
 }

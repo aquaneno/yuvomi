@@ -321,7 +321,6 @@ export const MODULE_ICON = {
   // `calendar-clock` stand er in der Leiste als zweiter blauer Kalender
   // direkt neben dem Kalender (Critique 2026-10-16, R19).
   schedule:         'briefcase-business',
-  timetable:        'graduation-cap',
   tasks:            'check-square',
   notes:            'sticky-note',
   meals:            'utensils',

@@ -1,5 +1,5 @@
 /* Weekly board: the time column stays visible while small screens scroll. */
-.timetable-page { padding: var(--space-4); overflow: auto; }
+.timetable-page { min-width: 0; }
 .tt-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-3); margin-block-end: var(--space-3); }
 .tt-toolbar label { display: grid; gap: var(--space-1); }
 .tt-layout { display: grid; grid-template-columns: minmax(220px, 270px) minmax(0, 1fr); gap: var(--space-4); align-items: start; }
@@ -11,7 +11,7 @@
 .tt-card__text span { font-size: var(--text-xs); color: var(--color-text-secondary); }
 .tt-drag { cursor: grab; padding: var(--space-2); min-width: 44px; min-height: 44px; display: grid; place-items: center; touch-action: none; }
 .tt-select[aria-pressed="true"] { outline: 2px solid var(--color-accent); }
-.tt-scroll { overflow: auto; max-height: 75vh; border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.tt-scroll { overflow: auto; border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
 .tt-table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 720px; table-layout: fixed; background: var(--color-surface); }
 .tt-table th, .tt-table td { padding: var(--space-2); border-block-end: 1px solid var(--color-border); border-inline-end: 1px solid var(--color-border); vertical-align: top; }
 .tt-table th { font-weight: 600; text-align: start; overflow-wrap: anywhere; hyphens: auto; }
@@ -39,3 +39,12 @@
   .tt-scroll { max-height: none; overflow: visible; }
   .tt-table { min-width: 0; }
 }
+.tt-dialog { border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 0; width: min(480px, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); background: var(--color-surface); color: var(--color-text-primary); }
+.tt-dialog--large { width: min(760px, calc(100% - 2rem)); }
+.tt-dialog::backdrop { background: rgb(0 0 0 / 45%); }
+.tt-dialog__header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-4); border-bottom: 1px solid var(--color-border); }
+.tt-dialog__header h2 { margin: 0; font-size: var(--text-lg); }
+.tt-dialog__body { padding: var(--space-4); }
+.tt-dialog .modal-panel__footer, .tt-dialog__footer { display: flex; flex-wrap: wrap; justify-content: end; gap: var(--space-2); margin-top: var(--space-4); }
+.tt-dialog input[type="color"] { width: 4rem; min-height: 44px; }
+.tt-dialog [data-error] { color: var(--color-danger); }

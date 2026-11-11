@@ -1,0 +1,39 @@
+{
+  "manifestVersion": 1,
+  "id": "school-timetable",
+  "name": "Stundenplan",
+  "version": "1.0.0",
+  "description": "Stundenpläne mit Fächern, Lehrkräften und Pausen je Familienmitglied. Benötigt den separaten Stundenplan-Dienst.",
+  "entry": "index.js",
+  "style": "style.css",
+  "icon": "graduation-cap",
+  "accent": "#0891B2",
+  "menu": {
+    "show": true,
+    "label": "Stundenplan",
+    "labelKey": "menu",
+    "icon": "graduation-cap",
+    "order": 100
+  },
+  "page": {
+    "composition": "data",
+    "width": "wide",
+    "navigation": "standard",
+    "responsive": "standard"
+  },
+  "i18n": {
+    "defaultLocale": "de"
+  },
+  "capabilities": {
+    "permissions": {
+      "module": {
+        "label": "Stundenplan",
+        "labelKey": "module",
+        "icon": "graduation-cap"
+      }
+    },
+    "api": {
+      "prefix": "/api/extensions/school-timetable"
+    }
+  }
+}

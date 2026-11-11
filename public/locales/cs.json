@@ -186,8 +186,7 @@
         "rewards": "Odměny",
         "pantry": "Spíž",
         "inventory": "Inventář",
-        "schedule": "Rozpis směn",
-        "timetable": "Rozvrh hodin"
+        "schedule": "Rozpis směn"
     },
     "dashboard": {
         "title": "Přehled",
@@ -7072,30 +7071,5 @@
         "body": "Yuvomi potřebuje několik funkcí, které tento prohlížeč zatím nezná. Tvých dat se to netýká.",
         "versions": "Yuvomi funguje od Chrome a Edge {{chrome}}, Firefox {{firefox}} a Safari {{safari}}, na iPhonu a iPadu od iOS {{ios}}.",
         "action": "Aktualizuj prohlížeč nebo zařízení a zkus to znovu. Pokud to nejde, otevři Yuvomi v jiném prohlížeči."
-    },
-    "timetable": {
-        "subjects": "Předměty",
-        "teacher": "Vyučující",
-        "room": "Učebna",
-        "lesson": "Hodina",
-        "break": "Přestávka",
-        "member": "Člen rodiny",
-        "times": "Časy výuky",
-        "addSubject": "Přidat předmět",
-        "choose": "Vybrat",
-        "free": "Volná hodina",
-        "place": "Umístit sem",
-        "move": "Přesunout",
-        "days": "Dny v týdnu",
-        "addLesson": "Přidat hodinu",
-        "addBreak": "Přidat přestávku",
-        "empty": "Vytvořte první předmět.",
-        "hint": "Přetáhněte předmět na volnou hodinu nebo jej vyberte a klikněte na hodinu. Kliknutím na výuku ji změníte, přesunete nebo smažete.",
-        "readOnly": "Rozvrh smí upravovat jen vlastník a správci.",
-        "removeHint": "Odstranění předmětů, hodin nebo dnů odstraní i jejich přiřazení.",
-        "conflict": "Rozvrh se změnil v jiném okně. Před úpravou jej znovu načtěte.",
-        "timesError": "Časy musí být platné, vzestupné a bez překryvů. Ponechte alespoň jednu hodinu.",
-        "invalid": "Zkontrolujte údaje: nejvýše 60 předmětů a 30 časových úseků.",
-        "noMembers": "Nejsou dostupní členové domácnosti."
     }
 }

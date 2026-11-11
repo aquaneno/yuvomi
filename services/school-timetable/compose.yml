@@ -1,0 +1,26 @@
+services:
+  school-timetable:
+    build:
+      context: ../..
+      dockerfile: services/school-timetable/Dockerfile
+    restart: unless-stopped
+    environment:
+      YUVOMI_URL: ${YUVOMI_URL:-http://yuvomi:3000}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Set the public Yuvomi origin, e.g. https://yuvomi.example.de}
+      TIMETABLE_DB: /data/timetable.db
+    volumes:
+      - timetable_data:/data
+    ports:
+      - "127.0.0.1:${TIMETABLE_PORT:-3100}:3100"
+    networks:
+      - yuvomi
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+networks:
+  yuvomi:
+    external: true
+    name: ${YUVOMI_NETWORK:-yuvomi_default}
+volumes:
+  timetable_data:

@@ -177,8 +177,7 @@
         "rewards": "Recompensas",
         "pantry": "Despensa",
         "inventory": "Inventário",
-        "schedule": "Turnos",
-        "timetable": "Grade de aulas"
+        "schedule": "Turnos"
     },
     "dashboard": {
         "title": "Painel",
@@ -6890,30 +6889,5 @@
         "body": "O Yuvomi precisa de alguns recursos que este navegador ainda não tem. Seus dados não são afetados.",
         "versions": "O Yuvomi funciona a partir do Chrome e do Edge {{chrome}}, Firefox {{firefox}} e Safari {{safari}}, e no iPhone e iPad a partir do iOS {{ios}}.",
         "action": "Atualize o navegador ou o dispositivo e tente novamente. Se não for possível, abra o Yuvomi em outro navegador."
-    },
-    "timetable": {
-        "subjects": "Disciplinas",
-        "teacher": "Professor",
-        "room": "Sala",
-        "lesson": "Aula",
-        "break": "Intervalo",
-        "member": "Familiar",
-        "times": "Horários das aulas",
-        "addSubject": "Adicionar disciplina",
-        "choose": "Escolher",
-        "free": "Horário livre",
-        "place": "Colocar aqui",
-        "move": "Mover",
-        "days": "Dias da semana",
-        "addLesson": "Adicionar aula",
-        "addBreak": "Adicionar intervalo",
-        "empty": "Crie a primeira disciplina.",
-        "hint": "Arraste uma disciplina para um horário livre ou selecione-a e clique num horário. Clique numa aula para alterar, mover ou limpar.",
-        "readOnly": "Somente o titular e administradores podem editar esta grade.",
-        "removeHint": "Remover disciplinas, horários ou dias também exclui suas atribuições.",
-        "conflict": "Esta grade mudou em outra janela. Recarregue antes de editar.",
-        "timesError": "Os horários devem ser válidos, crescentes e sem sobreposições. Mantenha pelo menos uma aula.",
-        "invalid": "Confira os dados: máximo de 60 disciplinas e 30 períodos.",
-        "noMembers": "Nenhum membro da família disponível."
     }
 }

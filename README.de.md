@@ -26,7 +26,7 @@
     <a href="README.md" hreflang="en">English&nbsp;(maßgeblich)</a>
   </p>
 
-  <p><b>21</b>&nbsp;Module&nbsp;&nbsp;·&nbsp; <b>27</b>&nbsp;Sprachen&nbsp;&nbsp;·&nbsp; <b>0</b>&nbsp;Tracker&nbsp;&nbsp;·&nbsp; <b>1</b>&nbsp;SQLite&#8209;Datei&nbsp;&nbsp;·&nbsp; ab&nbsp;<b>256&nbsp;MB</b>&nbsp;RAM</p>
+  <p><b>20</b>&nbsp;Module&nbsp;&nbsp;·&nbsp; <b>27</b>&nbsp;Sprachen&nbsp;&nbsp;·&nbsp; <b>0</b>&nbsp;Tracker&nbsp;&nbsp;·&nbsp; <b>1</b>&nbsp;SQLite&#8209;Datei&nbsp;&nbsp;·&nbsp; ab&nbsp;<b>256&nbsp;MB</b>&nbsp;RAM</p>
 
   <picture>
     <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/screenshots/de/dashboard-dark-mobile.webp" width="200">
@@ -91,15 +91,15 @@ und iPad Teilen und dann Zum Home-Bildschirm wählen.
 
 [Mehr auf yuvomi.cloud](https://yuvomi.cloud/#family)
 
-## Die einundzwanzig Module
+## Die zwanzig Module
 
 Schaltet ab, was euer Haushalt nicht braucht, und es verschwindet für alle aus dem Menü. Inventar,
 Entsorgung und Schichtplan sind anfangs aus.
 
 <details>
 <summary>
-Alle 21 Module, je in einer Zeile<br>
-<b>Planen</b> - Aufgaben · Kalender · Belohnungen · Notizen &amp; Kontakte · Schichtplan · Stundenplan<br>
+Alle 20 Module, je in einer Zeile<br>
+<b>Planen</b> - Aufgaben · Kalender · Belohnungen · Notizen &amp; Kontakte · Schichtplan<br>
 <b>Haushalt</b> - Küche (Mahlzeiten · Rezepte · Einkauf · Vorrat) · Haushaltshilfe · Entsorgung · Dokumente · Inventar<br>
 <b>Menschen</b> - Gesundheit · Geburtstage<br>
 <b>Finanzen</b> - Budget<br>
@@ -113,7 +113,6 @@ Alle 21 Module, je in einer Zeile<br>
 | **Belohnungen** | Punkte aus Aufgaben, ein elterlich freigegebener Katalog, ein nachvollziehbares Konto und Taschengeld je Kind. |
 | **Notizen &amp; Kontakte** | Markdown-Haftnotizen mit antippbaren Checklisten, dazu Kontakte mit CardDAV-Sync und vCard-Import/-Export. |
 | **Schichtplan** | Rotierende Schichten und feste Wochenpläne, als Ebene im Kalender eingeblendet. Standardmäßig aus. |
-| **Stundenplan** | Wochenpläne je Familienmitglied mit Fächern, Lehrkräften, Räumen, verschiebbaren Stunden und einstellbaren Pausen. |
 | **Mahlzeiten** | Wochenplaner per Drag-and-drop mit Rezept-Seitenleiste und direktem Export in die Einkaufsliste. |
 | **Rezepte** | Rezepte anlegen und skalieren, Mahlzeiten vorbelegen oder eine Mealie- oder Tandoor-Instanz lesend spiegeln. |
 | **Einkauf** | Geteilte Listen nach Gang sortiert, mit Wischgesten und einem Import aus dem Essensplan. |

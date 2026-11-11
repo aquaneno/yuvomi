@@ -189,7 +189,6 @@ function moduleRows(md) {
 }
 
 const NUMBER_WORDS = {
-  'twenty-one': 21, einundzwanzig: 21,
   sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20,
   sechzehn: 16, siebzehn: 17, achtzehn: 18, neunzehn: 19, zwanzig: 20,
 };
@@ -429,11 +428,11 @@ test('der Gruppen-Guard erkennt den Schaden, gegen den er gebaut ist', () => {
   assert.ok(hit(f1, /Gruppe "People"/) && hit(f1, /Gruppenzeile nennt "contacts", die Tabelle nicht/), f1.join(' | '));
   // Der Stand vor der Re-Critique vom 2026-10-24: Notizen und Kontakte getrennt
   // in ihren Menuegruppen, 21 Namen fuer 20 Tabellenzeilen.
-  const split = groupFindings(md.replace('Notes &amp; Contacts · Schedule · Timetable<br>', 'Notes · Schedule · Timetable<br>')
+  const split = groupFindings(md.replace('Notes &amp; Contacts · Schedule<br>', 'Notes · Schedule<br>')
     .replace('<b>People</b> - Health · Birthdays<br>', '<b>People</b> - Health · Contacts · Birthdays<br>'), html, 'en');
-  assert.ok(hit(split, /22 Namen in den Gruppenzeilen, die Tabelle hat 21 Zeilen/), split.join(' | '));
+  assert.ok(hit(split, /21 Namen in den Gruppenzeilen, die Tabelle hat 20 Zeilen/), split.join(' | '));
   // Die gemeinsame Zeile verliert ihre zweite Haelfte.
-  assert.ok(hit(swap('Notes &amp; Contacts · Schedule · Timetable<br>', 'Notes · Schedule · Timetable<br>'), /Tabellenzeile "Notes & Contacts" steht in keiner Gruppenzeile/));
+  assert.ok(hit(swap('Notes &amp; Contacts · Schedule<br>', 'Notes · Schedule<br>'), /Tabellenzeile "Notes & Contacts" steht in keiner Gruppenzeile/));
   // Ein Modul fehlt in den Gruppenzeilen, steht aber in der Tabelle.
   assert.ok(hit(swap(' · Waste collection', ''), /Tabellenzeile "Waste collection" steht in keiner Gruppenzeile/));
   // Eine Gruppe umbenannt.

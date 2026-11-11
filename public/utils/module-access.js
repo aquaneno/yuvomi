@@ -162,7 +162,6 @@ export const SCOPE_MODULES = Object.freeze([
   { key: 'calendar',     prefixes: ['calendar', 'reminders', 'birthdays'] },
   { key: 'notes',        prefixes: ['notes'] },
   { key: 'contacts',     prefixes: ['contacts'] },
-  { key: 'timetable',    prefixes: ['timetable'] },
   { key: 'schedule',     prefixes: ['schedule'] },
   { key: 'budget',       prefixes: ['budget', 'split-expenses'] },
   { key: 'documents',    prefixes: ['documents'] },

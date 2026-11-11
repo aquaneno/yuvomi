@@ -177,8 +177,7 @@
         "rewards": "Rewards",
         "pantry": "Pantry",
         "inventory": "Inventory",
-        "schedule": "Schedule",
-        "timetable": "Timetable"
+        "schedule": "Schedule"
     },
     "dashboard": {
         "title": "Overview",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi needs a few features this browser does not have yet. Your data is not affected.",
         "versions": "Yuvomi runs on Chrome and Edge {{chrome}}, Firefox {{firefox}} and Safari {{safari}} or newer, and on iPhone and iPad from iOS {{ios}}.",
         "action": "Update the browser or the device, then try again. If that is not possible, open Yuvomi in another browser."
-    },
-    "timetable": {
-        "subjects": "Subjects",
-        "teacher": "Teacher",
-        "room": "Room",
-        "lesson": "Lesson",
-        "break": "Break",
-        "member": "Family member",
-        "times": "Lesson times",
-        "addSubject": "Add subject",
-        "choose": "Choose",
-        "free": "Free period",
-        "place": "Place here",
-        "move": "Move",
-        "days": "Weekdays",
-        "addLesson": "Add lesson",
-        "addBreak": "Add break",
-        "empty": "Create your first subject.",
-        "hint": "Drag subjects to free periods, or choose a subject and click a period. Click an occupied period to change, move or clear it.",
-        "readOnly": "You can view this timetable. Only its owner and administrators can edit it.",
-        "removeHint": "Removing subjects, periods or weekdays also removes their assignments.",
-        "conflict": "This timetable changed in another window. Reload before editing.",
-        "timesError": "Times must be valid, increasing and without overlaps. Keep at least one lesson.",
-        "invalid": "Check the entries and limits: 60 subjects, 30 time slots.",
-        "noMembers": "No household members available."
     }
 }

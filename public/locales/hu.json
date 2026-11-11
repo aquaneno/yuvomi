@@ -177,8 +177,7 @@
         "rewards": "Jutalmak",
         "pantry": "Készlet",
         "inventory": "Leltár",
-        "schedule": "Műszakbeosztás",
-        "timetable": "Órarend"
+        "schedule": "Műszakbeosztás"
     },
     "dashboard": {
         "title": "Áttekintés",
@@ -6890,30 +6889,5 @@
         "body": "A Yuvominak szüksége van néhány funkcióra, amelyet ez a böngésző még nem ismer. Az adataidat ez nem érinti.",
         "versions": "A Yuvomi Chrome és Edge {{chrome}}, Firefox {{firefox}} és Safari {{safari}} verziótól fut, iPhone-on és iPaden iOS {{ios}} verziótól.",
         "action": "Frissítsd a böngészőt vagy az eszközt, majd próbáld újra. Ha ez nem lehetséges, nyisd meg a Yuvomit egy másik böngészőben."
-    },
-    "timetable": {
-        "subjects": "Tantárgyak",
-        "teacher": "Tanár",
-        "room": "Terem",
-        "lesson": "Óra",
-        "break": "Szünet",
-        "member": "Családtag",
-        "times": "Tanítási időpontok",
-        "addSubject": "Tantárgy hozzáadása",
-        "choose": "Kiválasztás",
-        "free": "Lyukasóra",
-        "place": "Elhelyezés itt",
-        "move": "Áthelyezés",
-        "days": "Hétköznapok",
-        "addLesson": "Óra hozzáadása",
-        "addBreak": "Szünet hozzáadása",
-        "empty": "Hozd létre az első tantárgyat.",
-        "hint": "Húzd a tantárgyat egy szabad órára, vagy válaszd ki, majd kattints az órára. A foglalt órára kattintva módosíthatod, áthelyezheted vagy törölheted.",
-        "readOnly": "Az órarendet csak a tulajdonosa és a rendszergazdák szerkeszthetik.",
-        "removeHint": "A tantárgyak, órák vagy napok eltávolítása a hozzárendeléseiket is törli.",
-        "conflict": "Az órarend egy másik ablakban megváltozott. Szerkesztés előtt töltsd újra.",
-        "timesError": "Az időpontok legyenek érvényesek, növekvők és átfedés nélküliek. Legalább egy óra maradjon.",
-        "invalid": "Ellenőrizd az adatokat: legfeljebb 60 tantárgy és 30 idősáv.",
-        "noMembers": "Nincsenek elérhető háztartástagok."
     }
 }

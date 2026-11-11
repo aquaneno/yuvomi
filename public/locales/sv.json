@@ -177,8 +177,7 @@
         "rewards": "Belöningar",
         "pantry": "Skafferi",
         "inventory": "Inventarier",
-        "schedule": "Skiftschema",
-        "timetable": "Lektionsschema"
+        "schedule": "Skiftschema"
     },
     "dashboard": {
         "title": "Översikt",
@@ -6890,30 +6889,5 @@
         "body": "Yuvomi behöver några funktioner som den här webbläsaren inte har ännu. Dina data påverkas inte.",
         "versions": "Yuvomi fungerar från Chrome och Edge {{chrome}}, Firefox {{firefox}} och Safari {{safari}}, och på iPhone och iPad från iOS {{ios}}.",
         "action": "Uppdatera webbläsaren eller enheten och försök sedan igen. Går det inte, öppna Yuvomi i en annan webbläsare."
-    },
-    "timetable": {
-        "subjects": "Ämnen",
-        "teacher": "Lärare",
-        "room": "Sal",
-        "lesson": "Lektion",
-        "break": "Rast",
-        "member": "Familjemedlem",
-        "times": "Lektionstider",
-        "addSubject": "Lägg till ämne",
-        "choose": "Välj",
-        "free": "Håltimme",
-        "place": "Placera här",
-        "move": "Flytta",
-        "days": "Veckodagar",
-        "addLesson": "Lägg till lektion",
-        "addBreak": "Lägg till rast",
-        "empty": "Skapa ditt första ämne.",
-        "hint": "Dra ett ämne till en ledig timme eller välj det och klicka på en timme. Klicka på en lektion för att ändra, flytta eller rensa.",
-        "readOnly": "Bara ägaren och administratörer kan redigera detta schema.",
-        "removeHint": "När ämnen, tider eller dagar tas bort försvinner även deras placeringar.",
-        "conflict": "Schemat har ändrats i ett annat fönster. Ladda om före redigering.",
-        "timesError": "Tiderna måste vara giltiga, stigande och utan överlapp. Behåll minst en lektion.",
-        "invalid": "Kontrollera uppgifterna: högst 60 ämnen och 30 tidsrutor.",
-        "noMembers": "Inga hushållsmedlemmar tillgängliga."
     }
 }

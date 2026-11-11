@@ -7217,35 +7217,3 @@ The server keeps no list of its own: `getSupportedLocales()` in `server/utils/i1
 ### Locale Switching
 
 The early language bootstrap applies both `lang` and writing direction before the app renders (`ar` uses `dir="rtl"`; all other supported locales use `dir="ltr"`). `setLocale(locale)` saves the selection, loads the new locale file, updates both document attributes, and fires the `locale-changed` custom event. The router rebuilds shared navigation and re-renders the active route so every visible label changes without a page reload.
-
-
-## School timetable
-
-The built-in `timetable` module provides a separate weekly school board at
-`/timetable`, with an independent `timetable:read` / `timetable:write` gate.
-All active household members can be selected. A plan is household-readable;
-only its owner or an administrator may change it, subject to module write access.
-Each member has their own subjects (name, teacher, room, colour) and time grid.
-The default is Monday–Friday, eight 45-minute lessons from 08:00 and 15-minute
-breaks after lessons 2, 4 and 6. The grid supports five, six or seven weekdays,
-up to 60 subjects and 30 ordered, non-overlapping lesson/break rows. Lesson
-numbers skip breaks. Times are local school wall-clock times, not UTC events.
-
-Drag a subject from the palette to an empty lesson to copy it; drag a scheduled
-lesson to another empty cell to move it. Touch uses the same Sortable wrapper as
-other boards. Choosing a subject then clicking a free cell, or opening a cell's
-editor, provides a keyboard/touch alternative. An occupied cell can be cleared,
-changed or selected for moving. Subjects and times are managed in shared dialogs;
-removing a subject, slot or weekday also removes its placements. Confirmation or
-an explicit removal warning precedes that save. Subject names are shared across
-all their placements, while the same subject may use different time slots.
-
-`school_timetables` stores one bounded JSON aggregate per member, with stable
-subject/slot IDs and a monotonically increasing revision. GET does not create
-records. PUT validates the complete graph and atomically compares the expected
-revision; stale writes receive 409 and the UI requires reload. Failed writes leave
-the last persisted board intact. Foreign subjects, break placements, duplicate
-cells, overlapping times and inactive/non-household owners are rejected. User
-removal cascades to this personal record. This first version is a recurring
-weekly school plan, with no calendar overlay, A/B weeks, holiday exceptions or
-notifications. Existing shift plans remain separately managed.

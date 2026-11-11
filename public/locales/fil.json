@@ -177,8 +177,7 @@
         "rewards": "Mga Gantimpala",
         "pantry": "Paminggalan",
         "inventory": "Imbentaryo",
-        "schedule": "Iskedyul ng shift",
-        "timetable": "Iskedyul ng klase"
+        "schedule": "Iskedyul ng shift"
     },
     "search": {
         "emptyHint": "Mag-type para pumunta sa isang bahagi o gumawa ng bago. Mula 2 karakter, makikita mo rin ang iyong mga entry, pati sa bahagi ng salita.",
@@ -6890,30 +6889,5 @@
         "body": "Kailangan ng Yuvomi ang ilang feature na hindi pa kilala ng browser na ito. Hindi apektado ang data mo.",
         "versions": "Gumagana ang Yuvomi mula Chrome at Edge {{chrome}}, Firefox {{firefox}} at Safari {{safari}}, at sa iPhone at iPad mula iOS {{ios}}.",
         "action": "I-update ang browser o ang device, saka subukang muli. Kung hindi ito posible, buksan ang Yuvomi sa ibang browser."
-    },
-    "timetable": {
-        "subjects": "Mga asignatura",
-        "teacher": "Guro",
-        "room": "Silid",
-        "lesson": "Klase",
-        "break": "Pahinga",
-        "member": "Miyembro ng pamilya",
-        "times": "Oras ng klase",
-        "addSubject": "Magdagdag ng asignatura",
-        "choose": "Pumili",
-        "free": "Bakanteng oras",
-        "place": "Ilagay dito",
-        "move": "Ilipat",
-        "days": "Mga araw sa linggo",
-        "addLesson": "Magdagdag ng klase",
-        "addBreak": "Magdagdag ng pahinga",
-        "empty": "Gawin ang unang asignatura.",
-        "hint": "I-drag ang asignatura sa bakanteng oras o piliin ito at i-click ang oras. I-click ang klase para baguhin, ilipat o alisin.",
-        "readOnly": "Ang may-ari at mga administrador lamang ang maaaring magbago ng iskedyul.",
-        "removeHint": "Kapag inalis ang asignatura, oras o araw, aalisin din ang mga pagkakatalaga nito.",
-        "conflict": "Nagbago ang iskedyul sa ibang window. I-load muli bago mag-edit.",
-        "timesError": "Dapat wasto, pataas at hindi magkakapatong ang mga oras. Magtira ng kahit isang klase.",
-        "invalid": "Suriin ang datos: hanggang 60 asignatura at 30 puwang ng oras.",
-        "noMembers": "Walang magagamit na miyembro ng sambahayan."
     }
 }

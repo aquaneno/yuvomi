@@ -108,7 +108,6 @@ import permissionsRouter from './routes/permissions.js';
 import changelogRouter from './routes/changelog.js';
 import mcpRouter from './mcp/server.js';
 import scheduleRouter from './routes/schedule.js';
-import timetableRouter from './routes/timetable.js';
 import scheduleFeedRouter from './routes/schedule-feed.js';
 import schedulePreferencesRouter from './routes/schedule-preferences.js';
 import scheduleExtrasRouter from './routes/schedule-extras.js';
@@ -901,7 +900,6 @@ app.use('/api/v1/schedule/feed', scheduleFeedRouter);
 app.use('/api/v1/schedule/preferences', schedulePreferencesRouter);
 app.use('/api/v1/schedule/extras', scheduleExtrasRouter);
 app.use('/api/v1/schedule', scheduleRouter);
-app.use('/api/v1/timetable', timetableRouter);
 app.use('/api/v1/permissions', permissionsRouter);
 
 // --------------------------------------------------------
